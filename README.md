@@ -21,7 +21,7 @@ Effective Testing of Android Applications by Constructing Activity Launching Con
     * copy lib/libz3/libz3.so and lib/libz3/libz3java.so to [your_library_path]
     * source /etc/profile
 * Prepare Android environment
-* Run "java -version", "python", "ant -version", "android -h" to check whether these tools are successfully configured.
+* Run "java -version", "python", "ant -version", "android create project" to check whether these tools are successfully configured.
 
 ## Usage of Fax:
 * Prepare an Android device or emulator and connect it to you computer.
