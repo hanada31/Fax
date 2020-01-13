@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.testBench"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="23" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <activity
+            android:name="com.example.testBench.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".acdt.AcdtBasic" android:exported="true"/>
+       <activity android:name=".acdt.AcdtCombine" android:exported="true"/>
+        <activity android:name=".acdt.AcdtDataUri" android:exported="true"/>
+
+        <activity android:name=".checker.EmptyChecker" android:exported="true"/>
+        <activity android:name=".checker.NullChecker" android:exported="true"/>
+        
+        <activity android:name=".complete.motivatingExample" android:exported="true"/>
+        
+        <activity android:name=".extra.ExtraBasic" android:exported="true"/>
+        <activity android:name=".extra.ExtraBasic2" android:exported="true"/>
+        <activity android:name=".extra.ExtraArray" android:exported="true"/>
+        <activity android:name=".extra.ExtraArray2" android:exported="true"/>
+        <activity android:name=".extra.ExtraBundle" android:exported="true"/>
+        <activity android:name=".extra.ExtraParce" android:exported="true"/>
+        <activity android:name=".extra.ExtraLoop" android:exported="true"/>
+        <activity android:name=".extra.ExtraLoopBranch" android:exported="true"/>
+
+        <activity android:name=".interact.ActionAndExtra" android:exported="true"/>
+        <activity android:name=".interact.ActionNoExtra" android:exported="true"/>
+        <activity android:name=".interact.ExtraNoAction" android:exported="true"/>
+        
+        <activity android:name=".lifecycle.LifeCycle" android:exported="true"/>
+        <activity android:name=".lifecycle.LifeCycle2" android:exported="true"/>
+        
+        
+        <activity android:name=".override.FatherClass" android:exported="true"/>
+        <activity android:name=".override.SonClass1" android:exported="true"/>
+        <activity android:name=".override.SonClass2" android:exported="true"/> 
+        <activity android:name=".override.TestInterface1" android:exported="true"/> 
+        <activity android:name=".override.TestInterface2" android:exported="true"/> 
+        
+        
+        <activity android:name=".sensitivity.ContextSensitive" android:exported="true"/>
+        <activity android:name=".sensitivity.ContextSensitive2" android:exported="true"/>
+        <activity android:name=".sensitivity.ContextSensitive3" android:exported="true"/>
+        <activity android:name=".sensitivity.ContextSensitive4" android:exported="true"/>
+        <activity android:name=".sensitivity.FieldSensitive" android:exported="true"/>
+        <activity android:name=".sensitivity.FieldSensitive2" android:exported="true"/>
+        <activity android:name=".sensitivity.FieldSensitive3" android:exported="true"/>
+        <activity android:name=".sensitivity.FlowSensitive" android:exported="true"/>
+        <activity android:name=".sensitivity.FlowSensitive2" android:exported="true"/>
+        <activity android:name=".sensitivity.PathSensitive" android:exported="true"/>
+        <activity android:name=".sensitivity.PathSensitive2" android:exported="true"/>
+        
+      
+                
+        <activity android:name=".string.CompareOp" android:exported="true"/>
+        <activity android:name=".string.ConstantValue" android:exported="true"/>
+        <activity android:name=".string.ConstantValueBranch" android:exported="true"/>
+        <activity android:name=".string.ReceiveVar" android:exported="true"/>
+        <activity android:name=".string.ReceiveVar2" android:exported="true"/>
+        <activity android:name=".string.ReceiveVar3" android:exported="true"/>
+        <activity android:name=".string.StringSource" android:exported="true"/>     
+        
+    </application>
+
+</manifest>

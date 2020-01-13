@@ -1,0 +1,2 @@
+python script/5_FairAndroidExploer.py Result_launch Result_explore_All Result_testGen apk_processed All
+pause

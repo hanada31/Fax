@@ -1,0 +1,204 @@
+BugInfo:
+hash:624027739
+FATAL EXCEPTION: main
+java.lang.IndexOutOfBoundsException: setSpan (-1 ... -1) starts before 0
+	at android.text.SpannableStringBuilder.checkRange(SpannableStringBuilder.java:1314)
+	at android.text.SpannableStringBuilder.setSpan(SpannableStringBuilder.java:680)
+	at android.text.SpannableStringBuilder.setSpan(SpannableStringBuilder.java:672)
+	at android.text.Selection.setSelection(Selection.java:76)
+	at android.text.method.ArrowKeyMovementMethod.onTouchEvent(ArrowKeyMovementMethod.java:283)
+	at android.widget.TextView.onTouchEvent(TextView.java:11327)
+	at android.view.View.dispatchTouchEvent(View.java:12540)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3159)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2844)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3159)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2844)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3159)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2844)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3159)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2844)
+	at android.widget.ScrollView.dispatchTouchEvent(ScrollView.java:726)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3159)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2844)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3159)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2844)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3159)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2844)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3159)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2844)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3159)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2844)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3159)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2844)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3159)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2844)
+	at com.android.internal.policy.DecorView.superDispatchTouchEvent(DecorView.java:601)
+	at com.android.internal.policy.PhoneWindow.superDispatchTouchEvent(PhoneWindow.java:1871)
+	at android.app.Activity.dispatchTouchEvent(Activity.java:3384)
+	at android.support.v7.view.WindowCallbackWrapper.dispatchTouchEvent(SourceFile:71)
+	at com.android.internal.policy.DecorView.dispatchTouchEvent(DecorView.java:563)
+	at android.view.View.dispatchPointerEvent(View.java:12788)
+	at android.view.ViewRootImpl$ViewPostImeInputStage.processPointerEvent(ViewRootImpl.java:5670)
+	at android.view.ViewRootImpl$ViewPostImeInputStage.onProcess(ViewRootImpl.java:5465)
+	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:4958)
+	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:5011)
+	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:4977)
+	at android.view.ViewRootImpl$AsyncInputStage.forward(ViewRootImpl.java:5114)
+	at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:4985)
+	at android.view.ViewRootImpl$AsyncInputStage.apply(ViewRootImpl.java:5171)
+	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:4958)
+	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:5011)
+	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:4977)
+	at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:4985)
+	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:4958)
+	at android.view.ViewRootImpl.deliverInputEvent(ViewRootImpl.java:7736)
+	at android.view.ViewRootImpl.doProcessInputEvents(ViewRootImpl.java:7676)
+	at android.view.ViewRootImpl.enqueueInputEvent(ViewRootImpl.java:7637)
+	at android.view.ViewRootImpl$WindowInputEventReceiver.onInputEvent(ViewRootImpl.java:7847)
+	at android.view.InputEventReceiver.dispatchInputEvent(InputEventReceiver.java:197)
+	at android.view.InputEventReceiver.nativeConsumeBatchedInputEvents(Native Method)
+	at android.view.InputEventReceiver.consumeBatchedInputEvents(InputEventReceiver.java:186)
+	at android.view.ViewRootImpl.doConsumeBatchedInput(ViewRootImpl.java:7810)
+	at android.view.ViewRootImpl$ConsumeBatchedInputRunnable.run(ViewRootImpl.java:7874)
+	at android.view.Choreographer$CallbackRecord.run(Choreographer.java:911)
+	at android.view.Choreographer.doCallbacks(Choreographer.java:723)
+	at android.view.Choreographer.doFrame(Choreographer.java:652)
+	at android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:897)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-2021764689
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{org.ligi.passandroid/org.ligi.passandroid.ui.quirk_fix.USAirwaysLoadActivity}: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String android.net.Uri.toString()' on a null object reference
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String android.net.Uri.toString()' on a null object reference
+	at org.ligi.passandroid.ui.quirk_fix.USAirwaysLoadActivity.onCreate(SourceFile:15)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+32	org.ligi.passandroid.ui.quirk_fix.USAirwaysLoadActivity	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+28	org.ligi.passandroid.ui.quirk_fix.USAirwaysLoadActivity	"aaaaaag";;null;;null;;null;;
+
+26	org.ligi.passandroid.ui.quirk_fix.USAirwaysLoadActivity	null;;null;;null;;null;;
+
+27	org.ligi.passandroid.ui.quirk_fix.USAirwaysLoadActivity	"aaaag";;null;;null;;null;;
+
+33	org.ligi.passandroid.ui.quirk_fix.USAirwaysLoadActivity	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+30	org.ligi.passandroid.ui.quirk_fix.USAirwaysLoadActivity	"A";;null;;null;;null;;
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:171873084
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{org.ligi.passandroid/org.ligi.passandroid.ui.quirk_fix.USAirwaysLoadActivity}: java.lang.ArrayIndexOutOfBoundsException: length=1; index=-1
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: length=1; index=-1
+	at org.ligi.passandroid.ui.quirk_fix.USAirwaysLoadActivity.onCreate(SourceFile:23)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+31	org.ligi.passandroid.ui.quirk_fix.USAirwaysLoadActivity	"aaaaaag";;null;;"l";;null;;
+
+29	org.ligi.passandroid.ui.quirk_fix.USAirwaysLoadActivity	null;;null;;"l";;null;;
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1991128891
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{org.ligi.passandroid/org.ligi.passandroid.ui.quirk_fix.URLRewriteActivity}: java.lang.IllegalArgumentException: Parameter specified as non-null is null: method kotlin.jvm.internal.Intrinsics.b, parameter uri
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.IllegalArgumentException: Parameter specified as non-null is null: method kotlin.jvm.internal.Intrinsics.b, parameter uri
+	at org.ligi.passandroid.ui.quirk_fix.URLRewriteController.a(Unknown Source:16)
+	at org.ligi.passandroid.ui.quirk_fix.URLRewriteActivity.onCreate(SourceFile:17)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+21	org.ligi.passandroid.ui.quirk_fix.URLRewriteActivity	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+18	org.ligi.passandroid.ui.quirk_fix.URLRewriteActivity	null;;null;;null;;null;;
+
+20	org.ligi.passandroid.ui.quirk_fix.URLRewriteActivity	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:651398685
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{org.ligi.passandroid/org.ligi.passandroid.ui.ExtractURLAsIphoneActivity}: java.lang.IllegalStateException: intent.data must not be null
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.IllegalStateException: intent.data must not be null
+	at org.ligi.passandroid.ui.ExtractURLAsIphoneActivity.onCreate(SourceFile:26)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+23	org.ligi.passandroid.ui.ExtractURLAsIphoneActivity	"A";;null;;null;;null;;
+
+24	org.ligi.passandroid.ui.ExtractURLAsIphoneActivity	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+22	org.ligi.passandroid.ui.ExtractURLAsIphoneActivity	null;;null;;null;;null;;
+
+25	org.ligi.passandroid.ui.ExtractURLAsIphoneActivity	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+

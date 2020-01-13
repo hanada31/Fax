@@ -1,0 +1,127 @@
+BugInfo:
+hash:-929250262
+FATAL EXCEPTION: main
+java.lang.NullPointerException: Attempt to invoke virtual method 'void android.animation.Animator.setAllowRunningAsynchronously(boolean)' on a null object reference
+	at android.animation.AnimatorSet.start(AnimatorSet.java:716)
+	at android.animation.AnimatorSet.start(AnimatorSet.java:684)
+	at android.widget.Editor$HandleView.restore(Editor.java:5277)
+	at android.widget.Editor$HandleView.onTouchEvent(Editor.java:5096)
+	at android.widget.Editor$InsertionHandleView.onTouchEvent(Editor.java:5627)
+	at android.view.View.dispatchTouchEvent(View.java:12540)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3159)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2844)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3159)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2844)
+	at android.widget.PopupWindow$PopupDecorView.dispatchTouchEvent(PopupWindow.java:2686)
+	at android.view.View.dispatchPointerEvent(View.java:12788)
+	at android.view.ViewRootImpl$ViewPostImeInputStage.processPointerEvent(ViewRootImpl.java:5670)
+	at android.view.ViewRootImpl$ViewPostImeInputStage.onProcess(ViewRootImpl.java:5465)
+	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:4958)
+	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:5011)
+	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:4977)
+	at android.view.ViewRootImpl$AsyncInputStage.forward(ViewRootImpl.java:5114)
+	at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:4985)
+	at android.view.ViewRootImpl$AsyncInputStage.apply(ViewRootImpl.java:5171)
+	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:4958)
+	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:5011)
+	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:4977)
+	at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:4985)
+	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:4958)
+	at android.view.ViewRootImpl.deliverInputEvent(ViewRootImpl.java:7736)
+	at android.view.ViewRootImpl.doProcessInputEvents(ViewRootImpl.java:7676)
+	at android.view.ViewRootImpl.enqueueInputEvent(ViewRootImpl.java:7637)
+	at android.view.ViewRootImpl$WindowInputEventReceiver.onInputEvent(ViewRootImpl.java:7847)
+	at android.view.InputEventReceiver.dispatchInputEvent(InputEventReceiver.java:197)
+	at android.os.MessageQueue.nativePollOnce(Native Method)
+	at android.os.MessageQueue.next(MessageQueue.java:325)
+	at android.os.Looper.loop(Looper.java:142)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-799224548
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Error receiving broadcast Intent { act=taxon_observation_bounds_result flg=0x10 (has extras) } in org.inaturalist.android.TaxonActivity$TaxonBoundsReceiver@cd9072b
+	at android.app.LoadedApk$ReceiverDispatcher$Args.lambda$-android_app_LoadedApk$ReceiverDispatcher$Args_52226(LoadedApk.java:1329)
+	at android.app.-$Lambda$FilBqgnXJrN9Mgyks1XHeAxzSTk.$m$0(Unknown Source:4)
+	at android.app.-$Lambda$FilBqgnXJrN9Mgyks1XHeAxzSTk.run(Unknown Source:0)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: com.google.maps.api.android.lib6.common.apiexception.d: Error using newLatLngBounds(LatLngBounds, int): Map size can't be 0. Most likely, layout has not yet occured for the map view.  Either wait until layout has occurred or use newLatLngBounds(LatLngBounds, int, int, int) which allows you to specify the map's dimensions.
+	at com.google.maps.api.android.lib6.common.l.b(:com.google.android.gms.dynamite_mapsdynamite@17455048@17.4.55 (040400-248795830):6)
+	at com.google.maps.api.android.lib6.gmm6.api.b.a(:com.google.android.gms.dynamite_mapsdynamite@17455048@17.4.55 (040400-248795830):131)
+	at com.google.maps.api.android.lib6.impl.ad.a(:com.google.android.gms.dynamite_mapsdynamite@17455048@17.4.55 (040400-248795830):3)
+	at com.google.maps.api.android.lib6.gmm6.api.b.a(:com.google.android.gms.dynamite_mapsdynamite@17455048@17.4.55 (040400-248795830):30)
+	at com.google.maps.api.android.lib6.impl.be.a(:com.google.android.gms.dynamite_mapsdynamite@17455048@17.4.55 (040400-248795830):262)
+	at com.google.android.gms.maps.internal.m.a(:com.google.android.gms.dynamite_mapsdynamite@17455048@17.4.55 (040400-248795830):460)
+	at hq.onTransact(:com.google.android.gms.dynamite_mapsdynamite@17455048@17.4.55 (040400-248795830):4)
+	at android.os.Binder.transact(Binder.java:612)
+	at com.google.android.gms.maps.internal.IGoogleMapDelegate$zza$zza.moveCamera(Unknown Source:28)
+	at com.google.android.gms.maps.GoogleMap.moveCamera(Unknown Source:6)
+	at org.inaturalist.android.TaxonActivity$TaxonBoundsReceiver.onReceive(TaxonActivity.java:615)
+	at android.app.LoadedApk$ReceiverDispatcher$Args.lambda$-android_app_LoadedApk$ReceiverDispatcher$Args_52226(LoadedApk.java:1319)
+	... 9 more
+
+ICC Msgs:
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1806173930
+FATAL EXCEPTION: main
+java.lang.IllegalStateException: The application's PagerAdapter changed the adapter's contents without calling PagerAdapter#notifyDataSetChanged! Expected adapter item count: 2, found: 5 Pager id: org.inaturalist.android:id/seasonability_view_pager Pager class: class android.support.v4.view.ViewPager Problematic adapter: class org.inaturalist.android.TaxonActivity$SeasonabilityPagerAdapter
+	at android.support.v4.view.ViewPager.populate(ViewPager.java:1137)
+	at android.support.v4.view.ViewPager.setCurrentItemInternal(ViewPager.java:663)
+	at android.support.v4.view.ViewPager.setCurrentItemInternal(ViewPager.java:625)
+	at android.support.v4.view.ViewPager.setCurrentItem(ViewPager.java:606)
+	at android.support.design.widget.TabLayout$ViewPagerOnTabSelectedListener.onTabSelected(TabLayout.java:2170)
+	at android.support.design.widget.TabLayout.dispatchTabSelected(TabLayout.java:1165)
+	at android.support.design.widget.TabLayout.selectTab(TabLayout.java:1158)
+	at android.support.design.widget.TabLayout.selectTab(TabLayout.java:1128)
+	at android.support.design.widget.TabLayout$Tab.select(TabLayout.java:1427)
+	at android.support.design.widget.TabLayout$TabView.performClick(TabLayout.java:1537)
+	at android.view.View$PerformClick.run(View.java:26101)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-363451074
+FATAL EXCEPTION: main
+java.lang.NullPointerException: Attempt to invoke interface method 'int android.database.Cursor.getPosition()' on a null object reference
+	at org.inaturalist.android.Observation.<init>(Observation.java:265)
+	at org.inaturalist.android.ObservationCursorAdapter.isLocked(ObservationCursorAdapter.java:753)
+	at org.inaturalist.android.ObservationListActivity$ObservationsPageAdapter$5.onItemClick(ObservationListActivity.java:1146)
+	at android.widget.AdapterView.performItemClick(AdapterView.java:350)
+	at android.widget.AbsListView.performItemClick(AbsListView.java:1683)
+	at android.widget.AbsListView$PerformClick.run(AbsListView.java:4094)
+	at android.widget.AbsListView$10.run(AbsListView.java:6583)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+60	org.inaturalist.android.ObservationListActivity	null;;null;;"A";;null;;
+
+------------------------------------------------------------------------
+

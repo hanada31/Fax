@@ -1,0 +1,66 @@
+BugInfo:
+hash:893770721
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{felixwiemuth.lincal/felixwiemuth.lincal.ui.CalendarViewActivity}: java.lang.RuntimeException: Missing argument: CalendarViewFragment.ARG_CALENDAR_POS
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Missing argument: CalendarViewFragment.ARG_CALENDAR_POS
+	at felixwiemuth.lincal.ui.CalendarViewActivity.onCreate(CalendarViewActivity.java:59)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+11	felixwiemuth.lincal.ui.CalendarViewActivity	null;;null;;null;;null;;
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1322803679
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{felixwiemuth.lincal/felixwiemuth.lincal.ui.CalendarViewActivity}: java.lang.RuntimeException: Illegal calendar position used.
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Illegal calendar position used.
+	at felixwiemuth.lincal.Calendars.getCalendarByPos(Calendars.java:100)
+	at felixwiemuth.lincal.ui.CalendarViewFragment.onCreate(CalendarViewFragment.java:126)
+	at android.support.v4.app.Fragment.performCreate(Fragment.java:2339)
+	at android.support.v4.app.FragmentManagerImpl.moveToState(FragmentManager.java:1377)
+	at android.support.v4.app.FragmentTransition.addToFirstInLastOut(FragmentTransition.java:1109)
+	at android.support.v4.app.FragmentTransition.calculateFragments(FragmentTransition.java:996)
+	at android.support.v4.app.FragmentTransition.startTransitions(FragmentTransition.java:99)
+	at android.support.v4.app.FragmentManagerImpl.executeOpsTogether(FragmentManager.java:2364)
+	at android.support.v4.app.FragmentManagerImpl.removeRedundantOperationsAndExecute(FragmentManager.java:2322)
+	at android.support.v4.app.FragmentManagerImpl.execPendingActions(FragmentManager.java:2229)
+	at android.support.v4.app.FragmentManagerImpl.dispatchStateChange(FragmentManager.java:3221)
+	at android.support.v4.app.FragmentManagerImpl.dispatchActivityCreated(FragmentManager.java:3171)
+	at android.support.v4.app.FragmentController.dispatchActivityCreated(FragmentController.java:192)
+	at android.support.v4.app.FragmentActivity.onStart(FragmentActivity.java:560)
+	at android.support.v7.app.AppCompatActivity.onStart(AppCompatActivity.java:177)
+	at android.app.Instrumentation.callActivityOnStart(Instrumentation.java:1340)
+	at android.app.Activity.performStart(Activity.java:7200)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2920)
+	... 9 more
+
+ICC Msgs:
+12	felixwiemuth.lincal.ui.CalendarViewActivity	null;;null;;null;;null;;int->felixwiemuth.lincal.CalendarListActivity.EXTRA_ARG_CALENDAR_POS->Integer.MAX_VALUE,
+
+------------------------------------------------------------------------
+

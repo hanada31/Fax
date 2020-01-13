@@ -1,0 +1,22 @@
+1Sheeld	17	bugs 
+AFWall+	4	bugs 
+AnkiDroid	10	bugs 
+AntennaPod	14	bugs 
+Calendula	8	bugs 
+Conversations	10	bugs 
+CSipSimple	17	bugs 
+EteSync	6	bugs 
+Evercam	8	bugs 
+iNaturalist	7	bugs 
+K9Mail	13	bugs 
+Lincal	1	bugs 
+OpenGPSTracker	4	bugs 
+OpenKeychain	33	bugs 
+Padland	6	bugs 
+PassAndroid	8	bugs 
+Simple-Solitaire	1	bugs 
+SteamGifts	3	bugs 
+SuntimesWidget	40	bugs 
+syncthing	3	bugs 
+
+Test Case Num:1091, Bug Num:213
