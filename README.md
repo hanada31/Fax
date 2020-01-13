@@ -3,11 +3,11 @@ A README.md main file describing what the artifact does and where it can be obta
 # Fax (Fair Android Explorer)
 Effective Testing of Android Applications by Constructing Activity Launching Contexts
 
-* -Fax
-  * -Coverage: Coverage result in paper
-  * -Crashes: Coverage result in paper
-  * -IntentBench: Self-designed benchmark
-  * -FaxTool: Runable tool Fax
+-Fax
+  -Coverage: Coverage result in paper
+  -Crashes: Coverage result in paper
+  -IntentBench: Self-designed benchmark
+  -FaxTool: Runable tool Fax
   
 ## Requirements:
 
