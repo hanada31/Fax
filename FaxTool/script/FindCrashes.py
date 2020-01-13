@@ -44,7 +44,7 @@ class BugDetector:
 								flag = True
 								line = line.split("AndroidRuntime: ")[1]
 								if("Permission Denial:" in line):
-									print "Permission Denial"
+									#print "Permission Denial"
 									log2=""
 									break
 								if("PID" not in line):

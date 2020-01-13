@@ -9,7 +9,7 @@ from utils import *
 from graphDistance import optimal_path
 
 class FairAndroidExploer:
-	def __init__(self, appName, laResultDir, exResultDir,tgResultDir, instAppFolder, act_type):
+	def __init__(self, appName, laResultDir, exResultDir,tgResultDir, instAppFolder, act_type, timeLimit):
 		self.appName = appName
 		self.laResultDir = laResultDir
 		self.exResultDir = exResultDir
@@ -23,7 +23,7 @@ class FairAndroidExploer:
 		self.eventNum = 0
 		self.time_start = 0
 		self.time_end = 0
-		self.timeLimit = 3600
+		self.timeLimit = timeLimit # exploration time 
 		self.initEvent = 5000
 		self.crashTcSet =set()
 		self.pickSet = set()
@@ -308,7 +308,7 @@ class FairAndroidExploer:
 		self.generateLaunchTxt(energyTurn0)
 		
 		#log files
-		source= self.laResultDir+"Logs" +os.sep +appName+os.sep+ "turn_0"
+		source= self.laResultDir+"Logs" +os.sep +self.appName+os.sep+ "turn_0"
 		target= self.LogDir + "turn_0"
 		if not os.path.exists(target):
 			os.makedirs(target)
@@ -516,9 +516,10 @@ if  __name__ == '__main__':
 	testcase_dir = sys.argv[3]+os.sep
 	apk_output_dir = sys.argv[4]+os.sep
 	act_type = sys.argv[5]
+	timeLimit = sys.argv[6]
 	tcFolder = testcase_dir + "testcases"+os.sep
 	for appName in os.listdir(tcFolder):
-		fax = FairAndroidExploer(appName, launch_dir, explore_dir,testcase_dir, apk_output_dir, act_type)
+		fax = FairAndroidExploer(appName, launch_dir, explore_dir,testcase_dir, apk_output_dir, act_type, timeLimit)
 		if not os.path.exists(fax.LogDir):
 			fax.main()
 		#break

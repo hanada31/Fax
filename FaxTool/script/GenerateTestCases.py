@@ -17,7 +17,6 @@ class TestGenerator:
 		
 	def getSet(self,fn, aset):
 		if not os.path.exists(fn):		
-			print 'creat'
 			f = open(fn, "w")
 			f.close()
 			
@@ -51,9 +50,10 @@ class TestGenerator:
 				
 				nowTime=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 				print nowTime
-				command = 'java -jar '+self.faxJar+' -p '+self.appDir+ ' -n ' +apk + " -maxPathNumber "  + str(self.maxPathNum) + ' -outputBasePath '+  self.testGenDir +'androlicOutput ' +' -o ' +testGenDir +' -exlib >  ' +  self.outputDir + apk[0:-4] + ".txt 2>&1" 	
+				command = 'java -jar '+self.faxJar+' -p '+self.appDir+ ' -n ' +apk + " -maxPathNumber "  + str(self.maxPathNum) + ' -outputBasePath '+  self.testGenDir +'androlicOutput ' +' -o ' +self.testGenDir +' -exlib >  ' +  self.outputDir + apk[0:-4] + ".txt 2>&1" 	
 				print command +"\n"
 				os.system(command)
+	
 				
 				print "write apk ",apk
 				f = open(fn, "a")
@@ -65,7 +65,7 @@ if __name__ == '__main__' :
 	faxJar = sys.argv[1]
 	apk_input_dir = sys.argv[2] + os.sep
 	testcase_dir = sys.argv[3]+ os.sep
-	execute_info_dir = testGenDir +sys.argv[4]+ os.sep
+	execute_info_dir = testcase_dir +sys.argv[4]+ os.sep
 	max_number_of_path = sys.argv[5]
 	
 	generator = TestGenerator(faxJar, apk_input_dir, testcase_dir, execute_info_dir, max_number_of_path)

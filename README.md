@@ -11,7 +11,6 @@ Effective Testing of Android Applications by Constructing Activity Launching Con
   - FaxTool: Runable tool Fax
   
 ## Requirements:
-
 * Install Java
 * Install Ant
 * Install Python 2.7
@@ -24,7 +23,6 @@ Effective Testing of Android Applications by Constructing Activity Launching Con
 * Prepare Android environment
 
 ## Usage of Fax:
-
 * Prepare an Android device or emulator and connect it to you computer.
 
 * Clone the project to your computer. 
@@ -35,6 +33,7 @@ python  script/0_prerocess.py  [apk_input_dir]  [apk_output_dir]
 e.g., python  script/0_prerocess.py  apk  apk_processed
 Then the activities will be exposed, the app will be instrumented, and then installed on the device.
 Please log in the app first and grant all the permission that the app asked.
+Turn the setting item "developer mode" on and allow "usb debugging".
 
 * Test Generation
 python  script/1_generateTestCases.py  lib/Fax0108.jar [apk_input_dir]  [testcase_dir] [execute_info_dir] [max_number_of_path]
@@ -62,9 +61,5 @@ e.g., python script/3_findCrashes.py Result_testGen  Result_explore_EA
 python script/7_collectLogcat.py  [testcase_dir]  [explore_dir]  [apk_output_dir]
 e.g., python script/7_collectLogcat.py  Result_testGen  Result_explore_EA apk_processed
 
--------------------------------------------------
-For example, you can run:
-python  script/run.py
-
-
-Note that, for "no libz3java" error, put libs libz3java.dll & libz3.dll (from https://github.com/z3prover/releases) under the folder $JAVA_HOME/jdk_version/bin
+For quick start, you can run:
+execute runFax.sh or runFax.bat
