@@ -27,6 +27,8 @@ Effective Testing of Android Applications by Constructing Activity Launching Con
 
 * Clone the project to your computer. 
 
+**For quick start, you can run: runFax.sh or runFax.bat**
+
 * Preprocess
 Put the apk under test under the [apk_input_dir], and get the result in the [apk_output_dir].
 python  script/0_prerocess.py  [apk_input_dir]  [apk_output_dir]
@@ -61,5 +63,4 @@ e.g., python script/3_findCrashes.py Result_testGen  Result_explore_EA
 python script/7_collectLogcat.py  [testcase_dir]  [explore_dir]  [apk_output_dir]
 e.g., python script/7_collectLogcat.py  Result_testGen  Result_explore_EA apk_processed
 
-For quick start, you can run:
-execute runFax.sh or runFax.bat
+
