@@ -20,7 +20,7 @@ Effective Testing of Android Applications by Constructing Activity Launching Con
     * add java.library.path into file /etc/profile (export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/[your_library_path]).
     * copy lib/libz3/libz3.so and lib/libz3/libz3java.so to [your_library_path]
     * source /etc/profile
-* Prepare Android environment
+* Prepare Android environment, the version of Android SDK is 17 and the version of Android SDK Tools should lower than 25.2.3.
 * Run "java -version", "python", "ant -version", "android create project" to check whether these tools are successfully configured.
 
 ## Usage of Fax:
