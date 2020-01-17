@@ -1,0 +1,336 @@
+BugInfo:
+hash:583076352
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{de.tobiasbielefeld.solitaire/de.tobiasbielefeld.solitaire.ui.settings.SettingsGames}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.de.tobiasbielefeld.solitaire.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.de.tobiasbielefeld.solitaire.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getBoolean(BaseBundle.java:825)
+	at android.content.Intent.getBooleanExtra(Intent.java:7585)
+	at android.preference.PreferenceActivity.onIsHidingHeaders(PreferenceActivity.java:1133)
+	at android.preference.PreferenceActivity.onCreate(PreferenceActivity.java:630)
+	at de.tobiasbielefeld.solitaire.ui.settings.a.onCreate(Unknown Source:20)
+	at de.tobiasbielefeld.solitaire.ui.settings.SettingsGames.onCreate(Unknown Source:14)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+22	de.tobiasbielefeld.solitaire.ui.settings.SettingsGames	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-27404543
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{de.tobiasbielefeld.solitaire/de.tobiasbielefeld.solitaire.ui.settings.Settings}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.de.tobiasbielefeld.solitaire.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.de.tobiasbielefeld.solitaire.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getBoolean(BaseBundle.java:825)
+	at android.content.Intent.getBooleanExtra(Intent.java:7585)
+	at android.preference.PreferenceActivity.onIsHidingHeaders(PreferenceActivity.java:1133)
+	at android.preference.PreferenceActivity.onCreate(PreferenceActivity.java:630)
+	at de.tobiasbielefeld.solitaire.ui.settings.a.onCreate(Unknown Source:20)
+	at de.tobiasbielefeld.solitaire.ui.settings.Settings.onCreate(Unknown Source:14)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.de.tobiasbielefeld.solitaire.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 21 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.de.tobiasbielefeld.solitaire.MySerializable" on path: DexPathList[[zip file "/data/app/de.tobiasbielefeld.solitaire-g6Nz3MHlPymcUPtpFmvz2A==/base.apk"],nativeLibraryDirectories=[/data/app/de.tobiasbielefeld.solitaire-g6Nz3MHlPymcUPtpFmvz2A==/lib/arm64, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 30 more
+
+ICC Msgs:
+13	de.tobiasbielefeld.solitaire.ui.settings.Settings	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-425834270
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{de.tobiasbielefeld.solitaire/de.tobiasbielefeld.solitaire.ui.settings.Settings}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.de.tobiasbielefeld.solitaire.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.de.tobiasbielefeld.solitaire.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getBoolean(BaseBundle.java:825)
+	at android.content.Intent.getBooleanExtra(Intent.java:7585)
+	at android.preference.PreferenceActivity.onIsHidingHeaders(PreferenceActivity.java:1133)
+	at android.preference.PreferenceActivity.onCreate(PreferenceActivity.java:630)
+	at de.tobiasbielefeld.solitaire.ui.settings.a.onCreate(Unknown Source:20)
+	at de.tobiasbielefeld.solitaire.ui.settings.Settings.onCreate(Unknown Source:14)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+12	de.tobiasbielefeld.solitaire.ui.settings.Settings	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-342834077
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{de.tobiasbielefeld.solitaire/de.tobiasbielefeld.solitaire.ui.settings.SettingsGames}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.de.tobiasbielefeld.solitaire.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.de.tobiasbielefeld.solitaire.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getBoolean(BaseBundle.java:825)
+	at android.content.Intent.getBooleanExtra(Intent.java:7585)
+	at android.preference.PreferenceActivity.onIsHidingHeaders(PreferenceActivity.java:1133)
+	at android.preference.PreferenceActivity.onCreate(PreferenceActivity.java:630)
+	at de.tobiasbielefeld.solitaire.ui.settings.a.onCreate(Unknown Source:20)
+	at de.tobiasbielefeld.solitaire.ui.settings.SettingsGames.onCreate(Unknown Source:14)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.de.tobiasbielefeld.solitaire.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 21 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.de.tobiasbielefeld.solitaire.MySerializable" on path: DexPathList[[zip file "/data/app/de.tobiasbielefeld.solitaire-g6Nz3MHlPymcUPtpFmvz2A==/base.apk"],nativeLibraryDirectories=[/data/app/de.tobiasbielefeld.solitaire-g6Nz3MHlPymcUPtpFmvz2A==/lib/arm64, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 30 more
+
+ICC Msgs:
+23	de.tobiasbielefeld.solitaire.ui.settings.SettingsGames	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-648052590
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{de.tobiasbielefeld.solitaire/de.tobiasbielefeld.solitaire.ui.manual.Manual}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.de.tobiasbielefeld.solitaire.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.de.tobiasbielefeld.solitaire.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.containsKey(BaseBundle.java:435)
+	at android.content.Intent.hasExtra(Intent.java:7530)
+	at de.tobiasbielefeld.solitaire.ui.manual.Manual.onCreate(Unknown Source:136)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+6	de.tobiasbielefeld.solitaire.ui.manual.Manual	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1409434937
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{de.tobiasbielefeld.solitaire/de.tobiasbielefeld.solitaire.ui.manual.Manual}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.de.tobiasbielefeld.solitaire.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.de.tobiasbielefeld.solitaire.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.containsKey(BaseBundle.java:435)
+	at android.content.Intent.hasExtra(Intent.java:7530)
+	at de.tobiasbielefeld.solitaire.ui.manual.Manual.onCreate(Unknown Source:136)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.de.tobiasbielefeld.solitaire.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.de.tobiasbielefeld.solitaire.MySerializable" on path: DexPathList[[zip file "/data/app/de.tobiasbielefeld.solitaire-g6Nz3MHlPymcUPtpFmvz2A==/base.apk"],nativeLibraryDirectories=[/data/app/de.tobiasbielefeld.solitaire-g6Nz3MHlPymcUPtpFmvz2A==/lib/arm64, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+7	de.tobiasbielefeld.solitaire.ui.manual.Manual	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1140048551
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{de.tobiasbielefeld.solitaire/de.tobiasbielefeld.solitaire.ui.GameManager}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.de.tobiasbielefeld.solitaire.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.de.tobiasbielefeld.solitaire.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getInt(BaseBundle.java:961)
+	at android.content.Intent.getIntExtra(Intent.java:7653)
+	at de.tobiasbielefeld.solitaire.ui.GameManager.onCreate(Unknown Source:347)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.de.tobiasbielefeld.solitaire.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.de.tobiasbielefeld.solitaire.MySerializable" on path: DexPathList[[zip file "/data/app/de.tobiasbielefeld.solitaire-g6Nz3MHlPymcUPtpFmvz2A==/base.apk"],nativeLibraryDirectories=[/data/app/de.tobiasbielefeld.solitaire-g6Nz3MHlPymcUPtpFmvz2A==/lib/arm64, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+20	de.tobiasbielefeld.solitaire.ui.GameManager	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-188057670
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{de.tobiasbielefeld.solitaire/de.tobiasbielefeld.solitaire.ui.GameManager}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.de.tobiasbielefeld.solitaire.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.de.tobiasbielefeld.solitaire.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getInt(BaseBundle.java:961)
+	at android.content.Intent.getIntExtra(Intent.java:7653)
+	at de.tobiasbielefeld.solitaire.ui.GameManager.onCreate(Unknown Source:347)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+19	de.tobiasbielefeld.solitaire.ui.GameManager	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+

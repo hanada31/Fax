@@ -1,0 +1,446 @@
+BugInfo:
+hash:923208194
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{net.mabako.steamgifts/net.mabako.steamgifts.intro.IntroActivity}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.net.mabako.steamgifts.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.net.mabako.steamgifts.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at net.mabako.steamgifts.intro.IntroActivity.init(IntroActivity.java:42)
+	at com.github.paolorotolo.appintro.AppIntro2.onCreate(AppIntro2.java:167)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.net.mabako.steamgifts.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 19 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.net.mabako.steamgifts.MySerializable" on path: DexPathList[[zip file "/data/app/net.mabako.steamgifts-onLpp2Y0e2Vx85fZh36y9Q==/base.apk"],nativeLibraryDirectories=[/data/app/net.mabako.steamgifts-onLpp2Y0e2Vx85fZh36y9Q==/lib/arm64, /data/app/net.mabako.steamgifts-onLpp2Y0e2Vx85fZh36y9Q==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 28 more
+
+ICC Msgs:
+73	net.mabako.steamgifts.intro.IntroActivity	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1340997669
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{net.mabako.steamgifts/net.mabako.steamgifts.activities.DetailActivity}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.net.mabako.steamgifts.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.net.mabako.steamgifts.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getSerializable(BaseBundle.java:1158)
+	at android.os.Bundle.getSerializable(Bundle.java:982)
+	at android.content.Intent.getSerializableExtra(Intent.java:7788)
+	at net.mabako.steamgifts.activities.DetailActivity.initLayout(DetailActivity.java:73)
+	at net.mabako.steamgifts.activities.DetailActivity.onCreate(DetailActivity.java:63)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.net.mabako.steamgifts.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 20 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.net.mabako.steamgifts.MySerializable" on path: DexPathList[[zip file "/data/app/net.mabako.steamgifts-onLpp2Y0e2Vx85fZh36y9Q==/base.apk"],nativeLibraryDirectories=[/data/app/net.mabako.steamgifts-onLpp2Y0e2Vx85fZh36y9Q==/lib/arm64, /data/app/net.mabako.steamgifts-onLpp2Y0e2Vx85fZh36y9Q==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 29 more
+
+ICC Msgs:
+36	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;String->user->abcde,Serializable->comment-context->SerializableObj,Serializable->notifications->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,Serializable->uuid->SerializableObj,
+
+15	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;String->user->abcde,Serializable->comment-context->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,Serializable->uuid->SerializableObj,
+
+42	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->abcde,Serializable->comment-context->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,
+
+17	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->abcde,Serializable->comment-context->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,Serializable->uuid->SerializableObj,
+
+34	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->abcde,Serializable->comment-context->SerializableObj,Serializable->giveaway->SerializableObj,
+
+7	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,Serializable->comment-context->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,
+
+45	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+14	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;String->user->999999999999999999999999999999999999999999999999999,Serializable->comment-context->SerializableObj,Serializable->notifications->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->giveaway-details->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,Serializable->uuid->SerializableObj,
+
+43	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,Serializable->giveaway->SerializableObj,
+
+11	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->abcde,Serializable->giveaway->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,Serializable->uuid->SerializableObj,
+
+18	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;String->user->abcde,Serializable->comment-context->SerializableObj,Serializable->giveaway->SerializableObj,
+
+29	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->abcde,Serializable->comment-context->SerializableObj,Serializable->notifications->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->giveaway-details->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,Serializable->uuid->SerializableObj,
+
+38	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->!@#$%^ds:+_,Serializable->comment-context->SerializableObj,Serializable->notifications->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,
+
+27	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->!@#$%^ds:+_,Serializable->comment-context->SerializableObj,Serializable->notifications->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->uuid->SerializableObj,
+
+9	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->abcde,Serializable->comment-context->SerializableObj,Serializable->notifications->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,Serializable->uuid->SerializableObj,
+
+2	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->!@#$%^ds:+_,Serializable->comment-context->SerializableObj,Serializable->notifications->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->giveaway-details->SerializableObj,Serializable->uuid->SerializableObj,
+
+8	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->abcde,Serializable->comment-context->SerializableObj,Serializable->notifications->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,Serializable->uuid->SerializableObj,
+
+4	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->abcde,Serializable->comment-context->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->uuid->SerializableObj,
+
+21	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->999999999999999999999999999999999999999999999999999,Serializable->comment-context->SerializableObj,Serializable->notifications->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->giveaway-details->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,
+
+39	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->999999999999999999999999999999999999999999999999999,Serializable->giveaway->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,
+
+28	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->giveaway->SerializableObj,
+
+35	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->abcde,Serializable->comment-context->SerializableObj,Serializable->giveaway->SerializableObj,
+
+12	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->abcde,Serializable->comment-context->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->giveaway-details->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,Serializable->uuid->SerializableObj,
+
+30	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->abcde,Serializable->notifications->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,Serializable->uuid->SerializableObj,
+
+16	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->!@#$%^ds:+_,Serializable->comment-context->SerializableObj,Serializable->notifications->SerializableObj,Serializable->giveaway-details->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,Serializable->uuid->SerializableObj,
+
+41	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;String->user->abcde,Serializable->comment-context->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,
+
+24	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,Serializable->comment-context->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,Serializable->uuid->SerializableObj,
+
+5	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->comment-context->SerializableObj,Serializable->giveaway->SerializableObj,
+
+37	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->999999999999999999999999999999999999999999999999999,Serializable->comment-context->SerializableObj,Serializable->notifications->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,Serializable->uuid->SerializableObj,
+
+33	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->abcde,Serializable->comment-context->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,Serializable->uuid->SerializableObj,
+
+25	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,Serializable->comment-context->SerializableObj,Serializable->giveaway->SerializableObj,
+
+26	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,Serializable->comment-context->SerializableObj,Serializable->giveaway->SerializableObj,
+
+32	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->comment-context->SerializableObj,
+
+6	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,Serializable->comment-context->SerializableObj,
+
+22	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->abcde,Serializable->comment-context->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,
+
+20	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->abcde,Serializable->comment-context->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,
+
+40	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,Serializable->comment-context->SerializableObj,Serializable->notifications->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,Serializable->uuid->SerializableObj,
+
+31	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->abcde,Serializable->comment-context->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,Serializable->uuid->SerializableObj,
+
+23	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,Serializable->comment-context->SerializableObj,Serializable->notifications->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->giveaway-details->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,Serializable->uuid->SerializableObj,
+
+13	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->999999999999999999999999999999999999999999999999999,Serializable->giveaway->SerializableObj,
+
+3	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->comment-context->SerializableObj,Serializable->giveaway->SerializableObj,
+
+19	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->!@#$%^ds:+_,Serializable->comment-context->SerializableObj,
+
+10	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Serializable->discussion->SerializableObj,String->user->abcde,Serializable->notifications->SerializableObj,Serializable->giveaway->SerializableObj,Serializable->giveaway-details->SerializableObj,Serializable->whitelist-blacklist-type->SerializableObj,Serializable->uuid->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-163757723
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{net.mabako.steamgifts/net.mabako.steamgifts.activities.WebViewActivity}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.net.mabako.steamgifts.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.net.mabako.steamgifts.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at net.mabako.steamgifts.activities.WebViewActivity.onCreate(WebViewActivity.java:45)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.net.mabako.steamgifts.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.net.mabako.steamgifts.MySerializable" on path: DexPathList[[zip file "/data/app/net.mabako.steamgifts-onLpp2Y0e2Vx85fZh36y9Q==/base.apk"],nativeLibraryDirectories=[/data/app/net.mabako.steamgifts-onLpp2Y0e2Vx85fZh36y9Q==/lib/arm64, /data/app/net.mabako.steamgifts-onLpp2Y0e2Vx85fZh36y9Q==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+67	net.mabako.steamgifts.activities.WebViewActivity	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1524681971
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{net.mabako.steamgifts/net.mabako.steamgifts.activities.WriteCommentActivity}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.net.mabako.steamgifts.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.net.mabako.steamgifts.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at net.mabako.steamgifts.activities.WriteCommentActivity.onCreate(WriteCommentActivity.java:56)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.net.mabako.steamgifts.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.net.mabako.steamgifts.MySerializable" on path: DexPathList[[zip file "/data/app/net.mabako.steamgifts-onLpp2Y0e2Vx85fZh36y9Q==/base.apk"],nativeLibraryDirectories=[/data/app/net.mabako.steamgifts-onLpp2Y0e2Vx85fZh36y9Q==/lib/arm64, /data/app/net.mabako.steamgifts-onLpp2Y0e2Vx85fZh36y9Q==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+79	net.mabako.steamgifts.activities.WriteCommentActivity	null;;null;;null;;null;;String->title->abcde,String->giveaway-id->abcde,Serializable->parent->SerializableObj,Serializable->comment-to-edit->SerializableObj,
+
+81	net.mabako.steamgifts.activities.WriteCommentActivity	null;;null;;null;;null;;String->xsrf-token->!@#$%^ds:+_,String->giveaway-id->!@#$%^ds:+_,Serializable->parent->SerializableObj,Serializable->comment-to-edit->SerializableObj,
+
+78	net.mabako.steamgifts.activities.WriteCommentActivity	null;;null;;null;;null;;String->title->abcde,String->xsrf-token->abcde,Serializable->parent->SerializableObj,Serializable->comment-to-edit->SerializableObj,
+
+80	net.mabako.steamgifts.activities.WriteCommentActivity	null;;null;;null;;null;;String->xsrf-token->!@#$%^ds:+_,String->giveaway-id->!@#$%^ds:+_,Serializable->parent->SerializableObj,Serializable->comment-to-edit->SerializableObj,
+
+91	net.mabako.steamgifts.activities.WriteCommentActivity	null;;null;;null;;null;;String->title->abcde,String->xsrf-token->abcde,String->giveaway-id->abcde,Serializable->parent->SerializableObj,
+
+75	net.mabako.steamgifts.activities.WriteCommentActivity	null;;null;;null;;null;;Serializable->parent->SerializableObj,
+
+88	net.mabako.steamgifts.activities.WriteCommentActivity	null;;null;;null;;null;;String->xsrf-token->abcde,Serializable->parent->SerializableObj,Serializable->comment-to-edit->SerializableObj,
+
+95	net.mabako.steamgifts.activities.WriteCommentActivity	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+77	net.mabako.steamgifts.activities.WriteCommentActivity	null;;null;;null;;null;;String->title->!@#$%^ds:+_,String->xsrf-token->!@#$%^ds:+_,String->giveaway-id->!@#$%^ds:+_,Serializable->comment-to-edit->SerializableObj,
+
+85	net.mabako.steamgifts.activities.WriteCommentActivity	null;;null;;null;;null;;String->xsrf-token->!@#$%^ds:+_,Serializable->parent->SerializableObj,
+
+84	net.mabako.steamgifts.activities.WriteCommentActivity	null;;null;;null;;null;;String->title->!@#$%^ds:+_,Serializable->parent->SerializableObj,
+
+87	net.mabako.steamgifts.activities.WriteCommentActivity	null;;null;;null;;null;;String->xsrf-token->999999999999999999999999999999999999999999999999999,Serializable->parent->SerializableObj,
+
+76	net.mabako.steamgifts.activities.WriteCommentActivity	null;;null;;null;;null;;String->title->abcde,String->xsrf-token->abcde,Serializable->parent->SerializableObj,
+
+82	net.mabako.steamgifts.activities.WriteCommentActivity	null;;null;;null;;null;;String->xsrf-token->!@#$%^ds:+_,String->giveaway-id->abcde,Serializable->parent->SerializableObj,
+
+86	net.mabako.steamgifts.activities.WriteCommentActivity	null;;null;;null;;null;;String->xsrf-token->999999999999999999999999999999999999999999999999999,String->giveaway-id->abcde,Serializable->comment-to-edit->SerializableObj,
+
+89	net.mabako.steamgifts.activities.WriteCommentActivity	null;;null;;null;;null;;String->giveaway-id->abcde,Serializable->parent->SerializableObj,Serializable->comment-to-edit->SerializableObj,
+
+90	net.mabako.steamgifts.activities.WriteCommentActivity	null;;null;;null;;null;;String->title->999999999999999999999999999999999999999999999999999,String->xsrf-token->999999999999999999999999999999999999999999999999999,String->giveaway-id->999999999999999999999999999999999999999999999999999,Serializable->parent->SerializableObj,Serializable->comment-to-edit->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1805724524
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{net.mabako.steamgifts/net.mabako.steamgifts.activities.WriteCommentActivity}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.net.mabako.steamgifts.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.net.mabako.steamgifts.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at net.mabako.steamgifts.activities.WriteCommentActivity.onCreate(WriteCommentActivity.java:56)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+94	net.mabako.steamgifts.activities.WriteCommentActivity	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:157328183
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{net.mabako.steamgifts/net.mabako.steamgifts.intro.IntroActivity}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.net.mabako.steamgifts.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.net.mabako.steamgifts.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at net.mabako.steamgifts.intro.IntroActivity.init(IntroActivity.java:42)
+	at com.github.paolorotolo.appintro.AppIntro2.onCreate(AppIntro2.java:167)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+72	net.mabako.steamgifts.intro.IntroActivity	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-664950662
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{net.mabako.steamgifts/net.mabako.steamgifts.activities.WebViewActivity}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.net.mabako.steamgifts.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.net.mabako.steamgifts.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at net.mabako.steamgifts.activities.WebViewActivity.onCreate(WebViewActivity.java:45)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+66	net.mabako.steamgifts.activities.WebViewActivity	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:874833691
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{net.mabako.steamgifts/net.mabako.steamgifts.activities.DetailActivity}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.net.mabako.steamgifts.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.net.mabako.steamgifts.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getSerializable(BaseBundle.java:1158)
+	at android.os.Bundle.getSerializable(Bundle.java:982)
+	at android.content.Intent.getSerializableExtra(Intent.java:7788)
+	at net.mabako.steamgifts.activities.DetailActivity.initLayout(DetailActivity.java:73)
+	at net.mabako.steamgifts.activities.DetailActivity.onCreate(DetailActivity.java:63)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+44	net.mabako.steamgifts.activities.DetailActivity	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+

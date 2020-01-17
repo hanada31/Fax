@@ -1,0 +1,162 @@
+BugInfo:
+hash:1096710160
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{de.danoeh.antennapod/de.danoeh.antennapod.activity.OnlineFeedViewActivity}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.de.danoeh.antennapod.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.de.danoeh.antennapod.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.containsKey(BaseBundle.java:435)
+	at android.content.Intent.hasExtra(Intent.java:7530)
+	at de.danoeh.antennapod.activity.OnlineFeedViewActivity.onCreate(OnlineFeedViewActivity.java:136)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+95	de.danoeh.antennapod.activity.OnlineFeedViewActivity	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-758934153
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{de.danoeh.antennapod/de.danoeh.antennapod.activity.OnlineFeedViewActivity}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.de.danoeh.antennapod.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.de.danoeh.antennapod.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.containsKey(BaseBundle.java:435)
+	at android.content.Intent.hasExtra(Intent.java:7530)
+	at de.danoeh.antennapod.activity.OnlineFeedViewActivity.onCreate(OnlineFeedViewActivity.java:136)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.de.danoeh.antennapod.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.de.danoeh.antennapod.MySerializable" on path: DexPathList[[zip file "/data/app/de.danoeh.antennapod-vCZIm9SQe_As-VYjSQKolQ==/base.apk"],nativeLibraryDirectories=[/data/app/de.danoeh.antennapod-vCZIm9SQe_As-VYjSQKolQ==/lib/arm64, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+96	de.danoeh.antennapod.activity.OnlineFeedViewActivity	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-2114773996
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{de.danoeh.antennapod/de.danoeh.antennapod.activity.OpmlImportFromIntentActivity}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.de.danoeh.antennapod.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.de.danoeh.antennapod.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at de.danoeh.antennapod.activity.OpmlImportFromIntentActivity.onCreate(OpmlImportFromIntentActivity.java:27)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.de.danoeh.antennapod.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.de.danoeh.antennapod.MySerializable" on path: DexPathList[[zip file "/data/app/de.danoeh.antennapod-vCZIm9SQe_As-VYjSQKolQ==/base.apk"],nativeLibraryDirectories=[/data/app/de.danoeh.antennapod-vCZIm9SQe_As-VYjSQKolQ==/lib/arm64, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+103	de.danoeh.antennapod.activity.OpmlImportFromIntentActivity	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1885523223
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{de.danoeh.antennapod/de.danoeh.antennapod.activity.OpmlImportFromIntentActivity}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.de.danoeh.antennapod.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.de.danoeh.antennapod.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at de.danoeh.antennapod.activity.OpmlImportFromIntentActivity.onCreate(OpmlImportFromIntentActivity.java:27)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+102	de.danoeh.antennapod.activity.OpmlImportFromIntentActivity	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+

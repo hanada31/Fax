@@ -1,0 +1,1508 @@
+BugInfo:
+hash:1997321602
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.AccountSetupComposition}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.setup.AccountSetupComposition.onCreate(AccountSetupComposition.java:44)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.fsck.k9.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.fsck.k9.MySerializable" on path: DexPathList[[zip file "/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk"],nativeLibraryDirectories=[/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/lib/arm64, /system/fake-libs64, /data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+108	com.fsck.k9.activity.setup.AccountSetupComposition	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-562604789
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.AccountSettings}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getBoolean(BaseBundle.java:825)
+	at android.content.Intent.getBooleanExtra(Intent.java:7585)
+	at android.preference.PreferenceActivity.onIsHidingHeaders(PreferenceActivity.java:1133)
+	at android.preference.PreferenceActivity.onCreate(PreferenceActivity.java:630)
+	at com.fsck.k9.activity.K9PreferenceActivity.onCreate(K9PreferenceActivity.java:16)
+	at com.fsck.k9.activity.setup.AccountSettings.onCreate(AccountSettings.java:217)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+57	com.fsck.k9.activity.setup.AccountSettings	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-697227838
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.UpgradeDatabases}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.Bundle.getParcelable(Bundle.java:888)
+	at android.content.Intent.getParcelableExtra(Intent.java:7746)
+	at com.fsck.k9.activity.UpgradeDatabases.decodeExtras(UpgradeDatabases.java:138)
+	at com.fsck.k9.activity.UpgradeDatabases.onCreate(UpgradeDatabases.java:109)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.fsck.k9.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 19 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.fsck.k9.MySerializable" on path: DexPathList[[zip file "/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk"],nativeLibraryDirectories=[/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/lib/arm64, /system/fake-libs64, /data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 28 more
+
+ICC Msgs:
+134	com.fsck.k9.activity.UpgradeDatabases	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-5021042
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.AccountSetupAccountType}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.setup.AccountSetupAccountType.onCreate(AccountSetupAccountType.java:56)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+113	com.fsck.k9.activity.setup.AccountSetupAccountType	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-537013489
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.AccountSetupIncoming}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.setup.AccountSetupIncoming.onCreate(AccountSetupIncoming.java:153)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.fsck.k9.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.fsck.k9.MySerializable" on path: DexPathList[[zip file "/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk"],nativeLibraryDirectories=[/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/lib/arm64, /system/fake-libs64, /data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+15	com.fsck.k9.activity.setup.AccountSetupIncoming	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1142082928
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.AccountSetupOutgoing}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.setup.AccountSetupOutgoing.onCreate(AccountSetupOutgoing.java:94)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.fsck.k9.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.fsck.k9.MySerializable" on path: DexPathList[[zip file "/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk"],nativeLibraryDirectories=[/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/lib/arm64, /system/fake-libs64, /data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+140	com.fsck.k9.activity.setup.AccountSetupOutgoing	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1695213806
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.ChooseFolder}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.ChooseFolder.onCreate(ChooseFolder.java:84)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.fsck.k9.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.fsck.k9.MySerializable" on path: DexPathList[[zip file "/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk"],nativeLibraryDirectories=[/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/lib/arm64, /system/fake-libs64, /data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+33	com.fsck.k9.activity.ChooseFolder	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1930182253
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.ManageIdentities}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.ChooseIdentity.onCreate(ChooseIdentity.java:38)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+119	com.fsck.k9.activity.ManageIdentities	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:705024412
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.EmailAddressList}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getSerializable(BaseBundle.java:1158)
+	at android.os.Bundle.getSerializable(Bundle.java:982)
+	at android.content.Intent.getSerializableExtra(Intent.java:7788)
+	at com.fsck.k9.activity.EmailAddressList.onCreate(EmailAddressList.java:27)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+7	com.fsck.k9.activity.EmailAddressList	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1805925219
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.AccountSetupNames}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.setup.AccountSetupNames.onCreate(AccountSetupNames.java:61)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+149	com.fsck.k9.activity.setup.AccountSetupNames	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1117857616
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.NotificationDeleteConfirmation}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.NotificationDeleteConfirmation.extractExtras(NotificationDeleteConfirmation.java:65)
+	at com.fsck.k9.activity.NotificationDeleteConfirmation.onCreate(NotificationDeleteConfirmation.java:58)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+145	com.fsck.k9.activity.NotificationDeleteConfirmation	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1697934630
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.ChooseFolder}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.ChooseFolder.onCreate(ChooseFolder.java:84)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+32	com.fsck.k9.activity.ChooseFolder	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1930412973
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.Prefs}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getBoolean(BaseBundle.java:825)
+	at android.content.Intent.getBooleanExtra(Intent.java:7585)
+	at android.preference.PreferenceActivity.onIsHidingHeaders(PreferenceActivity.java:1133)
+	at android.preference.PreferenceActivity.onCreate(PreferenceActivity.java:630)
+	at com.fsck.k9.activity.K9PreferenceActivity.onCreate(K9PreferenceActivity.java:16)
+	at com.fsck.k9.activity.setup.Prefs.onCreate(Prefs.java:183)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+122	com.fsck.k9.activity.setup.Prefs	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-297240400
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.AccountSetupOutgoing}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.setup.AccountSetupOutgoing.onCreate(AccountSetupOutgoing.java:94)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+139	com.fsck.k9.activity.setup.AccountSetupOutgoing	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-2081371215
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.AccountSetupIncoming}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.setup.AccountSetupIncoming.onCreate(AccountSetupIncoming.java:153)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+14	com.fsck.k9.activity.setup.AccountSetupIncoming	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:374169141
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.FolderSettings}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getBoolean(BaseBundle.java:825)
+	at android.content.Intent.getBooleanExtra(Intent.java:7585)
+	at android.preference.PreferenceActivity.onIsHidingHeaders(PreferenceActivity.java:1133)
+	at android.preference.PreferenceActivity.onCreate(PreferenceActivity.java:630)
+	at com.fsck.k9.activity.K9PreferenceActivity.onCreate(K9PreferenceActivity.java:16)
+	at com.fsck.k9.activity.setup.FolderSettings.onCreate(FolderSettings.java:54)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.fsck.k9.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 21 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.fsck.k9.MySerializable" on path: DexPathList[[zip file "/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk"],nativeLibraryDirectories=[/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/lib/arm64, /system/fake-libs64, /data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 30 more
+
+ICC Msgs:
+74	com.fsck.k9.activity.setup.FolderSettings	null;;null;;null;;null;;Serializable->com.fsck.k9.folderName->SerializableObj,
+
+78	com.fsck.k9.activity.setup.FolderSettings	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+76	com.fsck.k9.activity.setup.FolderSettings	null;;null;;null;;null;;Serializable->com.fsck.k9.folderName->SerializableObj,String->com.fsck.k9.account->abcde,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1968618687
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.ChooseIdentity}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.ChooseIdentity.onCreate(ChooseIdentity.java:38)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.fsck.k9.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.fsck.k9.MySerializable" on path: DexPathList[[zip file "/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk"],nativeLibraryDirectories=[/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/lib/arm64, /system/fake-libs64, /data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+4	com.fsck.k9.activity.ChooseIdentity	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1006752574
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.AccountSetupComposition}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.setup.AccountSetupComposition.onCreate(AccountSetupComposition.java:44)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+107	com.fsck.k9.activity.setup.AccountSetupComposition	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1341335751
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.ChooseIdentity}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.ChooseIdentity.onCreate(ChooseIdentity.java:38)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+3	com.fsck.k9.activity.ChooseIdentity	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:539553739
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.FontSizeSettings}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getBoolean(BaseBundle.java:825)
+	at android.content.Intent.getBooleanExtra(Intent.java:7585)
+	at android.preference.PreferenceActivity.onIsHidingHeaders(PreferenceActivity.java:1133)
+	at android.preference.PreferenceActivity.onCreate(PreferenceActivity.java:630)
+	at com.fsck.k9.activity.K9PreferenceActivity.onCreate(K9PreferenceActivity.java:16)
+	at com.fsck.k9.activity.setup.FontSizeSettings.onCreate(FontSizeSettings.java:74)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+129	com.fsck.k9.activity.setup.FontSizeSettings	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:932736335
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.AccountSetupNames}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.setup.AccountSetupNames.onCreate(AccountSetupNames.java:61)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.fsck.k9.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.fsck.k9.MySerializable" on path: DexPathList[[zip file "/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk"],nativeLibraryDirectories=[/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/lib/arm64, /system/fake-libs64, /data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+150	com.fsck.k9.activity.setup.AccountSetupNames	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-922551725
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.FolderSettings}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getBoolean(BaseBundle.java:825)
+	at android.content.Intent.getBooleanExtra(Intent.java:7585)
+	at android.preference.PreferenceActivity.onIsHidingHeaders(PreferenceActivity.java:1133)
+	at android.preference.PreferenceActivity.onCreate(PreferenceActivity.java:630)
+	at com.fsck.k9.activity.K9PreferenceActivity.onCreate(K9PreferenceActivity.java:16)
+	at com.fsck.k9.activity.setup.FolderSettings.onCreate(FolderSettings.java:54)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+77	com.fsck.k9.activity.setup.FolderSettings	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:522685710
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.UpgradeDatabases}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.Bundle.getParcelable(Bundle.java:888)
+	at android.content.Intent.getParcelableExtra(Intent.java:7746)
+	at com.fsck.k9.activity.UpgradeDatabases.decodeExtras(UpgradeDatabases.java:138)
+	at com.fsck.k9.activity.UpgradeDatabases.onCreate(UpgradeDatabases.java:109)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+133	com.fsck.k9.activity.UpgradeDatabases	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+132	com.fsck.k9.activity.UpgradeDatabases	null;;null;;null;;null;;Parcelable->start_intent->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1152082390
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.AccountSetupAccountType}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.setup.AccountSetupAccountType.onCreate(AccountSetupAccountType.java:56)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.fsck.k9.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.fsck.k9.MySerializable" on path: DexPathList[[zip file "/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk"],nativeLibraryDirectories=[/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/lib/arm64, /system/fake-libs64, /data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+114	com.fsck.k9.activity.setup.AccountSetupAccountType	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1515287590
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.AccountSetupOptions}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.setup.AccountSetupOptions.onCreate(AccountSetupOptions.java:102)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.fsck.k9.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.fsck.k9.MySerializable" on path: DexPathList[[zip file "/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk"],nativeLibraryDirectories=[/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/lib/arm64, /system/fake-libs64, /data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+127	com.fsck.k9.activity.setup.AccountSetupOptions	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:331014877
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.FontSizeSettings}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getBoolean(BaseBundle.java:825)
+	at android.content.Intent.getBooleanExtra(Intent.java:7585)
+	at android.preference.PreferenceActivity.onIsHidingHeaders(PreferenceActivity.java:1133)
+	at android.preference.PreferenceActivity.onCreate(PreferenceActivity.java:630)
+	at com.fsck.k9.activity.K9PreferenceActivity.onCreate(K9PreferenceActivity.java:16)
+	at com.fsck.k9.activity.setup.FontSizeSettings.onCreate(FontSizeSettings.java:74)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.fsck.k9.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 21 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.fsck.k9.MySerializable" on path: DexPathList[[zip file "/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk"],nativeLibraryDirectories=[/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/lib/arm64, /system/fake-libs64, /data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 30 more
+
+ICC Msgs:
+130	com.fsck.k9.activity.setup.FontSizeSettings	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1444948965
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.AccountSettings}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getBoolean(BaseBundle.java:825)
+	at android.content.Intent.getBooleanExtra(Intent.java:7585)
+	at android.preference.PreferenceActivity.onIsHidingHeaders(PreferenceActivity.java:1133)
+	at android.preference.PreferenceActivity.onCreate(PreferenceActivity.java:630)
+	at com.fsck.k9.activity.K9PreferenceActivity.onCreate(K9PreferenceActivity.java:16)
+	at com.fsck.k9.activity.setup.AccountSettings.onCreate(AccountSettings.java:217)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.fsck.k9.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 21 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.fsck.k9.MySerializable" on path: DexPathList[[zip file "/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk"],nativeLibraryDirectories=[/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/lib/arm64, /system/fake-libs64, /data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 30 more
+
+ICC Msgs:
+58	com.fsck.k9.activity.setup.AccountSettings	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:232684257
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.ManageIdentities}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.ChooseIdentity.onCreate(ChooseIdentity.java:38)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.fsck.k9.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.fsck.k9.MySerializable" on path: DexPathList[[zip file "/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk"],nativeLibraryDirectories=[/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/lib/arm64, /system/fake-libs64, /data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+120	com.fsck.k9.activity.ManageIdentities	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-794046576
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.EmailAddressList}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getSerializable(BaseBundle.java:1158)
+	at android.os.Bundle.getSerializable(Bundle.java:982)
+	at android.content.Intent.getSerializableExtra(Intent.java:7788)
+	at com.fsck.k9.activity.EmailAddressList.onCreate(EmailAddressList.java:27)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.fsck.k9.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 19 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.fsck.k9.MySerializable" on path: DexPathList[[zip file "/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk"],nativeLibraryDirectories=[/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/lib/arm64, /system/fake-libs64, /data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 28 more
+
+ICC Msgs:
+6	com.fsck.k9.activity.EmailAddressList	null;;null;;null;;null;;Serializable->contact->SerializableObj,
+
+8	com.fsck.k9.activity.EmailAddressList	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:244392037
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.EditIdentity}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getSerializable(BaseBundle.java:1158)
+	at android.os.Bundle.getSerializable(Bundle.java:982)
+	at android.content.Intent.getSerializableExtra(Intent.java:7788)
+	at com.fsck.k9.activity.EditIdentity.onCreate(EditIdentity.java:37)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+103	com.fsck.k9.activity.EditIdentity	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1312889582
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.AccountSetupCheckSettings}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.setup.AccountSetupCheckSettings.onCreate(AccountSetupCheckSettings.java:96)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+63	com.fsck.k9.activity.setup.AccountSetupCheckSettings	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:602315635
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.EditIdentity}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getSerializable(BaseBundle.java:1158)
+	at android.os.Bundle.getSerializable(Bundle.java:982)
+	at android.content.Intent.getSerializableExtra(Intent.java:7788)
+	at com.fsck.k9.activity.EditIdentity.onCreate(EditIdentity.java:37)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.fsck.k9.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 19 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.fsck.k9.MySerializable" on path: DexPathList[[zip file "/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk"],nativeLibraryDirectories=[/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/lib/arm64, /system/fake-libs64, /data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 28 more
+
+ICC Msgs:
+104	com.fsck.k9.activity.EditIdentity	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+102	com.fsck.k9.activity.EditIdentity	null;;null;;null;;null;;Serializable->com.fsck.k9.EditIdentity_identity->SerializableObj,int->com.fsck.k9.EditIdentity_identity_index->Integer.MIN_VALUE,
+
+100	com.fsck.k9.activity.EditIdentity	null;;null;;null;;null;;Serializable->com.fsck.k9.EditIdentity_identity->SerializableObj,String->com.fsck.k9.EditIdentity_account->abcde,int->com.fsck.k9.EditIdentity_identity_index->0,
+
+101	com.fsck.k9.activity.EditIdentity	null;;null;;null;;null;;Serializable->com.fsck.k9.EditIdentity_identity->SerializableObj,String->com.fsck.k9.EditIdentity_account->abcde,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1546122946
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.AccountSetupCheckSettings}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.setup.AccountSetupCheckSettings.onCreate(AccountSetupCheckSettings.java:96)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.fsck.k9.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.fsck.k9.MySerializable" on path: DexPathList[[zip file "/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk"],nativeLibraryDirectories=[/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/lib/arm64, /system/fake-libs64, /data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+64	com.fsck.k9.activity.setup.AccountSetupCheckSettings	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+60	com.fsck.k9.activity.setup.AccountSetupCheckSettings	null;;null;;null;;null;;Serializable->checkDirection->SerializableObj,
+
+61	com.fsck.k9.activity.setup.AccountSetupCheckSettings	null;;null;;null;;null;;String->account->999999999999999999999999999999999999999999999999999,Serializable->checkDirection->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1181180934
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.AccountSetupOptions}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.fsck.k9.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.setup.AccountSetupOptions.onCreate(AccountSetupOptions.java:102)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+126	com.fsck.k9.activity.setup.AccountSetupOptions	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:796144380
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.NotificationDeleteConfirmation}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at android.content.Intent.getStringExtra(Intent.java:7718)
+	at com.fsck.k9.activity.NotificationDeleteConfirmation.extractExtras(NotificationDeleteConfirmation.java:65)
+	at com.fsck.k9.activity.NotificationDeleteConfirmation.onCreate(NotificationDeleteConfirmation.java:58)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.fsck.k9.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 19 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.fsck.k9.MySerializable" on path: DexPathList[[zip file "/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk"],nativeLibraryDirectories=[/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/lib/arm64, /system/fake-libs64, /data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 28 more
+
+ICC Msgs:
+146	com.fsck.k9.activity.NotificationDeleteConfirmation	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:358052607
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.fsck.k9/com.fsck.k9.activity.setup.Prefs}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.fsck.k9.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getBoolean(BaseBundle.java:825)
+	at android.content.Intent.getBooleanExtra(Intent.java:7585)
+	at android.preference.PreferenceActivity.onIsHidingHeaders(PreferenceActivity.java:1133)
+	at android.preference.PreferenceActivity.onCreate(PreferenceActivity.java:630)
+	at com.fsck.k9.activity.K9PreferenceActivity.onCreate(K9PreferenceActivity.java:16)
+	at com.fsck.k9.activity.setup.Prefs.onCreate(Prefs.java:183)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.fsck.k9.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 21 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.fsck.k9.MySerializable" on path: DexPathList[[zip file "/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk"],nativeLibraryDirectories=[/data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/lib/arm64, /system/fake-libs64, /data/app/com.fsck.k9-25kvAocZFvsSWgYLrg8K_g==/base.apk!/lib/arm64-v8a, /system/lib64, /system/vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 30 more
+
+ICC Msgs:
+123	com.fsck.k9.activity.setup.Prefs	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+

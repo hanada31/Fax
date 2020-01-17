@@ -1,0 +1,720 @@
+BugInfo:
+hash:-1321254078
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.csipsimple/com.csipsimple.wizards.BasePrefsWizard}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.csipsimple.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.csipsimple.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getLong(BaseBundle.java:995)
+	at android.content.Intent.getLongExtra(Intent.java:7670)
+	at com.csipsimple.wizards.BasePrefsWizard.onCreate(BasePrefsWizard.java:67)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+22	com.csipsimple.wizards.BasePrefsWizard	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1228255206
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.csipsimple.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.putString(BaseBundle.java:596)
+	at android.content.Intent.putExtra(Intent.java:8795)
+	at com.csipsimple.wizards.WizardChooser.onChildClick(WizardChooser.java:91)
+	at android.widget.ExpandableListView.handleItemClick(ExpandableListView.java:714)
+	at android.widget.ExpandableListView.performItemClick(ExpandableListView.java:653)
+	at android.widget.AbsListView$PerformClick.run(AbsListView.java:4094)
+	at android.widget.AbsListView$10.run(AbsListView.java:6583)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.ClassNotFoundException: fax.com.csipsimple.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 17 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.csipsimple.MySerializable" on path: DexPathList[[zip file "/data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/base.apk"],nativeLibraryDirectories=[/data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/lib/arm, /system/fake-libs, /data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/base.apk!/lib/armeabi-v7a, /system/lib, /system/vendor/lib]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 26 more
+
+ICC Msgs:
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1701553625
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.csipsimple/com.csipsimple.ui.prefs.cupcake.PrefsLoaderActivity}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.csipsimple.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.csipsimple.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getBoolean(BaseBundle.java:825)
+	at android.content.Intent.getBooleanExtra(Intent.java:7585)
+	at android.preference.PreferenceActivity.onIsHidingHeaders(PreferenceActivity.java:1133)
+	at android.preference.PreferenceActivity.onCreate(PreferenceActivity.java:630)
+	at com.csipsimple.ui.prefs.GenericPrefs.onCreate(GenericPrefs.java:51)
+	at com.csipsimple.ui.prefs.cupcake.PrefsLoaderActivity.onCreate(PrefsLoaderActivity.java:45)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.csipsimple.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 21 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.csipsimple.MySerializable" on path: DexPathList[[zip file "/data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/base.apk"],nativeLibraryDirectories=[/data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/lib/arm, /system/fake-libs, /data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/base.apk!/lib/armeabi-v7a, /system/lib, /system/vendor/lib]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 30 more
+
+ICC Msgs:
+60	com.csipsimple.ui.prefs.cupcake.PrefsLoaderActivity	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1202402888
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to resume activity {com.csipsimple/com.csipsimple.ui.calllog.CallLogDetailsActivity}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.csipsimple.MySerializable)
+	at android.app.ActivityThread.performResumeActivity(ActivityThread.java:3790)
+	at android.app.ActivityThread.handleResumeActivity(ActivityThread.java:3830)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3038)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.csipsimple.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getLongArray(BaseBundle.java:1365)
+	at com.csipsimple.ui.calllog.CallLogDetailsFragment.getCallLogEntryUris(CallLogDetailsFragment.java:160)
+	at com.csipsimple.ui.calllog.CallLogDetailsFragment.onResume(CallLogDetailsFragment.java:147)
+	at android.support.v4.app.FragmentManagerImpl.moveToState(FragmentManager.java:918)
+	at android.support.v4.app.FragmentManagerImpl.moveToState(FragmentManager.java:1083)
+	at android.support.v4.app.FragmentManagerImpl.moveToState(FragmentManager.java:1065)
+	at android.support.v4.app.FragmentManagerImpl.dispatchResume(FragmentManager.java:1854)
+	at android.support.v4.app.FragmentActivity.onResumeFragments(FragmentActivity.java:431)
+	at android.support.v4.app.FragmentActivity.onPostResume(FragmentActivity.java:420)
+	at com.actionbarsherlock.app.SherlockFragmentActivity.onPostResume(SherlockFragmentActivity.java:70)
+	at android.app.Activity.performResume(Activity.java:7439)
+	at android.app.ActivityThread.performResumeActivity(ActivityThread.java:3765)
+	... 10 more
+Caused by: java.lang.ClassNotFoundException: fax.com.csipsimple.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 25 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.csipsimple.MySerializable" on path: DexPathList[[zip file "/data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/base.apk"],nativeLibraryDirectories=[/data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/lib/arm, /system/fake-libs, /data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/base.apk!/lib/armeabi-v7a, /system/lib, /system/vendor/lib]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 34 more
+
+ICC Msgs:
+53	com.csipsimple.ui.calllog.CallLogDetailsActivity	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1749437001
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.csipsimple/com.csipsimple.ui.account.AccountEdit}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.csipsimple.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.csipsimple.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getLong(BaseBundle.java:995)
+	at android.content.Intent.getLongExtra(Intent.java:7670)
+	at com.csipsimple.wizards.BasePrefsWizard.onCreate(BasePrefsWizard.java:67)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.csipsimple.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.csipsimple.MySerializable" on path: DexPathList[[zip file "/data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/base.apk"],nativeLibraryDirectories=[/data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/lib/arm, /system/fake-libs, /data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/base.apk!/lib/armeabi-v7a, /system/lib, /system/vendor/lib]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+120	com.csipsimple.ui.account.AccountEdit	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-166508889
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.csipsimple/com.csipsimple.ui.filters.AccountFilters}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.csipsimple.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.csipsimple.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getLong(BaseBundle.java:995)
+	at com.csipsimple.ui.filters.AccountFilters.onCreate(AccountFilters.java:46)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.csipsimple.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 17 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.csipsimple.MySerializable" on path: DexPathList[[zip file "/data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/base.apk"],nativeLibraryDirectories=[/data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/lib/arm, /system/fake-libs, /data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/base.apk!/lib/armeabi-v7a, /system/lib, /system/vendor/lib]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 26 more
+
+ICC Msgs:
+68	com.csipsimple.ui.filters.AccountFilters	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1070225264
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to resume activity {com.csipsimple/com.csipsimple.ui.calllog.CallLogDetailsActivity}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.csipsimple.MyParcelable
+	at android.app.ActivityThread.performResumeActivity(ActivityThread.java:3790)
+	at android.app.ActivityThread.handleResumeActivity(ActivityThread.java:3830)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3038)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.csipsimple.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getLongArray(BaseBundle.java:1365)
+	at com.csipsimple.ui.calllog.CallLogDetailsFragment.getCallLogEntryUris(CallLogDetailsFragment.java:160)
+	at com.csipsimple.ui.calllog.CallLogDetailsFragment.onResume(CallLogDetailsFragment.java:147)
+	at android.support.v4.app.FragmentManagerImpl.moveToState(FragmentManager.java:918)
+	at android.support.v4.app.FragmentManagerImpl.moveToState(FragmentManager.java:1083)
+	at android.support.v4.app.FragmentManagerImpl.moveToState(FragmentManager.java:1065)
+	at android.support.v4.app.FragmentManagerImpl.dispatchResume(FragmentManager.java:1854)
+	at android.support.v4.app.FragmentActivity.onResumeFragments(FragmentActivity.java:431)
+	at android.support.v4.app.FragmentActivity.onPostResume(FragmentActivity.java:420)
+	at com.actionbarsherlock.app.SherlockFragmentActivity.onPostResume(SherlockFragmentActivity.java:70)
+	at android.app.Activity.performResume(Activity.java:7439)
+	at android.app.ActivityThread.performResumeActivity(ActivityThread.java:3765)
+	... 10 more
+
+ICC Msgs:
+52	com.csipsimple.ui.calllog.CallLogDetailsActivity	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1606788177
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.csipsimple/com.csipsimple.ui.filters.EditFilter}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.csipsimple.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.csipsimple.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getLong(BaseBundle.java:995)
+	at android.content.Intent.getLongExtra(Intent.java:7670)
+	at com.csipsimple.ui.filters.EditFilter.onCreate(EditFilter.java:70)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+16	com.csipsimple.ui.filters.EditFilter	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1012527949
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.csipsimple/com.csipsimple.ui.filters.EditFilter}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.csipsimple.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.csipsimple.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getLong(BaseBundle.java:995)
+	at android.content.Intent.getLongExtra(Intent.java:7670)
+	at com.csipsimple.ui.filters.EditFilter.onCreate(EditFilter.java:70)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.csipsimple.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.csipsimple.MySerializable" on path: DexPathList[[zip file "/data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/base.apk"],nativeLibraryDirectories=[/data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/lib/arm, /system/fake-libs, /data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/base.apk!/lib/armeabi-v7a, /system/lib, /system/vendor/lib]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+17	com.csipsimple.ui.filters.EditFilter	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1787317397
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.csipsimple/com.csipsimple.ui.prefs.cupcake.PrefsLoaderActivity}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.csipsimple.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.csipsimple.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getBoolean(BaseBundle.java:825)
+	at android.content.Intent.getBooleanExtra(Intent.java:7585)
+	at android.preference.PreferenceActivity.onIsHidingHeaders(PreferenceActivity.java:1133)
+	at android.preference.PreferenceActivity.onCreate(PreferenceActivity.java:630)
+	at com.csipsimple.ui.prefs.GenericPrefs.onCreate(GenericPrefs.java:51)
+	at com.csipsimple.ui.prefs.cupcake.PrefsLoaderActivity.onCreate(PrefsLoaderActivity.java:45)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+59	com.csipsimple.ui.prefs.cupcake.PrefsLoaderActivity	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:862532054
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.csipsimple/com.csipsimple.ui.messages.MessageActivity}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.csipsimple.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.csipsimple.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at com.csipsimple.ui.messages.MessageFragment.onViewCreated(MessageFragment.java:138)
+	at android.support.v4.app.FragmentManagerImpl.moveToState(FragmentManager.java:885)
+	at android.support.v4.app.FragmentManagerImpl.moveToState(FragmentManager.java:1083)
+	at android.support.v4.app.BackStackRecord.run(BackStackRecord.java:635)
+	at android.support.v4.app.FragmentManagerImpl.execPendingActions(FragmentManager.java:1431)
+	at android.support.v4.app.FragmentActivity.onStart(FragmentActivity.java:523)
+	at com.csipsimple.ui.messages.MessageActivity.onStart(MessageActivity.java:57)
+	at android.app.Instrumentation.callActivityOnStart(Instrumentation.java:1340)
+	at android.app.Activity.performStart(Activity.java:7200)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2920)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.csipsimple.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 23 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.csipsimple.MySerializable" on path: DexPathList[[zip file "/data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/base.apk"],nativeLibraryDirectories=[/data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/lib/arm, /system/fake-libs, /data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/base.apk!/lib/armeabi-v7a, /system/lib, /system/vendor/lib]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 32 more
+
+ICC Msgs:
+87	com.csipsimple.ui.messages.MessageActivity	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1365643607
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.csipsimple/com.csipsimple.ui.account.AccountEdit}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.csipsimple.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.csipsimple.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getLong(BaseBundle.java:995)
+	at android.content.Intent.getLongExtra(Intent.java:7670)
+	at com.csipsimple.wizards.BasePrefsWizard.onCreate(BasePrefsWizard.java:67)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+119	com.csipsimple.ui.account.AccountEdit	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:2124073032
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.csipsimple/com.csipsimple.ui.messages.MessageActivity}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.csipsimple.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.csipsimple.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getString(BaseBundle.java:1086)
+	at com.csipsimple.ui.messages.MessageFragment.onViewCreated(MessageFragment.java:138)
+	at android.support.v4.app.FragmentManagerImpl.moveToState(FragmentManager.java:885)
+	at android.support.v4.app.FragmentManagerImpl.moveToState(FragmentManager.java:1083)
+	at android.support.v4.app.BackStackRecord.run(BackStackRecord.java:635)
+	at android.support.v4.app.FragmentManagerImpl.execPendingActions(FragmentManager.java:1431)
+	at android.support.v4.app.FragmentActivity.onStart(FragmentActivity.java:523)
+	at com.csipsimple.ui.messages.MessageActivity.onStart(MessageActivity.java:57)
+	at android.app.Instrumentation.callActivityOnStart(Instrumentation.java:1340)
+	at android.app.Activity.performStart(Activity.java:7200)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2920)
+	... 9 more
+
+ICC Msgs:
+86	com.csipsimple.ui.messages.MessageActivity	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1717528666
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to resume activity {com.csipsimple/com.csipsimple.ui.incall.InCallMediaControl}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.csipsimple.MyParcelable
+	at android.app.ActivityThread.performResumeActivity(ActivityThread.java:3790)
+	at android.app.ActivityThread.handleResumeActivity(ActivityThread.java:3830)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3038)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.csipsimple.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getInt(BaseBundle.java:961)
+	at android.content.Intent.getIntExtra(Intent.java:7653)
+	at com.csipsimple.ui.incall.InCallMediaControl.onResume(InCallMediaControl.java:106)
+	at android.app.Instrumentation.callActivityOnResume(Instrumentation.java:1361)
+	at android.app.Activity.performResume(Activity.java:7415)
+	at android.app.ActivityThread.performResumeActivity(ActivityThread.java:3765)
+	... 10 more
+
+ICC Msgs:
+71	com.csipsimple.ui.incall.InCallMediaControl	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-351511300
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.csipsimple/com.csipsimple.wizards.BasePrefsWizard}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.csipsimple.MySerializable)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.csipsimple.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getLong(BaseBundle.java:995)
+	at android.content.Intent.getLongExtra(Intent.java:7670)
+	at com.csipsimple.wizards.BasePrefsWizard.onCreate(BasePrefsWizard.java:67)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+Caused by: java.lang.ClassNotFoundException: fax.com.csipsimple.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.csipsimple.MySerializable" on path: DexPathList[[zip file "/data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/base.apk"],nativeLibraryDirectories=[/data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/lib/arm, /system/fake-libs, /data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/base.apk!/lib/armeabi-v7a, /system/lib, /system/vendor/lib]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 27 more
+
+ICC Msgs:
+23	com.csipsimple.wizards.BasePrefsWizard	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-715571362
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to resume activity {com.csipsimple/com.csipsimple.ui.incall.InCallMediaControl}: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.csipsimple.MySerializable)
+	at android.app.ActivityThread.performResumeActivity(ActivityThread.java:3790)
+	at android.app.ActivityThread.handleResumeActivity(ActivityThread.java:3830)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3038)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.RuntimeException: Parcelable encountered ClassNotFoundException reading a Serializable object (name = fax.com.csipsimple.MySerializable)
+	at android.os.Parcel.readSerializable(Parcel.java:2965)
+	at android.os.Parcel.readValue(Parcel.java:2751)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getInt(BaseBundle.java:961)
+	at android.content.Intent.getIntExtra(Intent.java:7653)
+	at com.csipsimple.ui.incall.InCallMediaControl.onResume(InCallMediaControl.java:106)
+	at android.app.Instrumentation.callActivityOnResume(Instrumentation.java:1361)
+	at android.app.Activity.performResume(Activity.java:7415)
+	at android.app.ActivityThread.performResumeActivity(ActivityThread.java:3765)
+	... 10 more
+Caused by: java.lang.ClassNotFoundException: fax.com.csipsimple.MySerializable
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:453)
+	at android.os.Parcel$2.resolveClass(Parcel.java:2951)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1616)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1521)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1777)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1354)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:374)
+	at android.os.Parcel.readSerializable(Parcel.java:2959)
+	... 19 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "fax.com.csipsimple.MySerializable" on path: DexPathList[[zip file "/data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/base.apk"],nativeLibraryDirectories=[/data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/lib/arm, /system/fake-libs, /data/app/com.csipsimple-z-mDPXcbiYyY5G-QXa39vg==/base.apk!/lib/armeabi-v7a, /system/lib, /system/vendor/lib]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 28 more
+
+ICC Msgs:
+72	com.csipsimple.ui.incall.InCallMediaControl	null;;null;;null;;null;;Serializable->serObj->SerializableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1877032075
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.csipsimple/com.csipsimple.ui.filters.AccountFilters}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.csipsimple.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.csipsimple.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.BaseBundle.getLong(BaseBundle.java:995)
+	at com.csipsimple.ui.filters.AccountFilters.onCreate(AccountFilters.java:46)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+67	com.csipsimple.ui.filters.AccountFilters	null;;null;;null;;null;;Parcelable->parObj->ParcelableObj,
+
+------------------------------------------------------------------------
+

@@ -1,0 +1,154 @@
+BugInfo:
+hash:-576708928
+FATAL EXCEPTION: main
+java.lang.NullPointerException: Attempt to invoke virtual method 'rocks.xmpp.addr.Jid eu.siacs.conversations.entities.Contact.getJid()' on a null object reference
+	at eu.siacs.conversations.ui.XmppActivity.showAddToRosterDialog(XmppActivity.java:655)
+	at eu.siacs.conversations.ui.ContactDetailsActivity.lambda$onCreate$1$ContactDetailsActivity(ContactDetailsActivity.java:204)
+	at eu.siacs.conversations.ui.-$$Lambda$ContactDetailsActivity$NJx7cZmzfTlK4VP6AJamZRttzR8.onClick(Unknown Source:8)
+	at android.view.View.performClick(View.java:6897)
+	at android.widget.TextView.performClick(TextView.java:12693)
+	at android.view.View$PerformClick.run(View.java:26101)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1812583664
+FATAL EXCEPTION: main
+java.lang.NullPointerException: Attempt to invoke virtual method 'rocks.xmpp.addr.Jid eu.siacs.conversations.entities.Account.getJid()' on a null object reference
+	at eu.siacs.conversations.ui.BlocklistActivity.showEnterJidDialog(BlocklistActivity.java:75)
+	at eu.siacs.conversations.ui.BlocklistActivity.lambda$onCreate$1$BlocklistActivity(BlocklistActivity.java:30)
+	at eu.siacs.conversations.ui.-$$Lambda$BlocklistActivity$IzcjGlFBfYaCLppvWx3AVYtn_JA.onClick(Unknown Source:8)
+	at android.view.View.performClick(View.java:6897)
+	at android.view.View$PerformClick.run(View.java:26101)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1842401758
+FATAL EXCEPTION: main
+java.lang.IllegalStateException: Fragment already added: EnterJidDialog{b5d6490 #2 dialog}
+	at android.support.v4.app.FragmentManagerImpl.addFragment(FragmentManager.java:1916)
+	at android.support.v4.app.BackStackRecord.executePopOps(BackStackRecord.java:828)
+	at android.support.v4.app.FragmentManagerImpl.executeOps(FragmentManager.java:2622)
+	at android.support.v4.app.FragmentManagerImpl.executeOpsTogether(FragmentManager.java:2411)
+	at android.support.v4.app.FragmentManagerImpl.removeRedundantOperationsAndExecute(FragmentManager.java:2366)
+	at android.support.v4.app.FragmentManagerImpl.execPendingActions(FragmentManager.java:2273)
+	at android.support.v4.app.FragmentManagerImpl$1.run(FragmentManager.java:733)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-617881398
+FATAL EXCEPTION: Thread-14
+java.lang.IllegalArgumentException: Invalid input to toASCII: 12345%#ahh@*/h$%#chfzinacar345abfocarjx45h@*/h$%#china234#chrr12345
+	at java.net.IDN.toASCII(IDN.java:112)
+	at java.net.IDN.toASCII(IDN.java:134)
+	at de.measite.minidns.idna.DefaultIdnaTransformator.toASCII(DefaultIdnaTransformator.java:19)
+	at de.measite.minidns.idna.MiniDnsIdna.toASCII(MiniDnsIdna.java:18)
+	at de.measite.minidns.DNSName.<init>(DNSName.java:85)
+	at de.measite.minidns.DNSName.from(DNSName.java:253)
+	at eu.siacs.conversations.utils.Resolver.fromHardCoded(Resolver.java:77)
+	at eu.siacs.conversations.xmpp.XmppConnection.connect(XmppConnection.java:285)
+	at eu.siacs.conversations.xmpp.XmppConnection.run(XmppConnection.java:457)
+	at java.lang.Thread.run(Thread.java:764)
+Caused by: The labels in the input are too long. Length > 63.. line:  0. preContext:  . postContext: 12345%#ahh@*/h$%#chfzinacar345abfocarjx45h@*/h$%#china234#chrr12345
+
+	at android.icu.impl.IDNA2003.convertToASCII(IDNA2003.java:258)
+	at android.icu.impl.IDNA2003.convertIDNToASCII(IDNA2003.java:277)
+	at android.icu.text.IDNA.convertIDNToASCII(IDNA.java:654)
+	at java.net.IDN.toASCII(IDN.java:110)
+	... 9 more
+
+ICC Msgs:
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-366958585
+FATAL EXCEPTION: main
+java.lang.NoSuchMethodError: No virtual method v2S3FileTransfer()Z in class Leu/siacs/conversations/xmpp/XmppConnection$Features; or its super classes (declaration of 'eu.siacs.conversations.xmpp.XmppConnection$Features' appears in base.apk)
+	at eu.siacs.conversations.entities.Account.httpUploadAvailable(Account.java:145)
+	at eu.siacs.conversations.entities.Account.httpUploadAvailable(Account.java:149)
+	at eu.siacs.conversations.ui.util.ConversationMenuConfigurator.configureAttachmentMenu(ConversationMenuConfigurator.java:61)
+	at eu.siacs.conversations.ui.ConversationFragment.onCreateOptionsMenu(ConversationFragment.java:971)
+	at android.app.Fragment.performCreateOptionsMenu(Fragment.java:2732)
+	at android.app.FragmentManagerImpl.dispatchCreateOptionsMenu(FragmentManager.java:3151)
+	at android.app.FragmentController.dispatchCreateOptionsMenu(FragmentController.java:343)
+	at android.app.Activity.onCreatePanelMenu(Activity.java:3466)
+	at android.support.v4.app.FragmentActivity.onCreatePanelMenu(FragmentActivity.java:378)
+	at android.support.v7.view.WindowCallbackWrapper.onCreatePanelMenu(WindowCallbackWrapper.java:94)
+	at android.support.v7.app.AppCompatDelegateImpl$AppCompatWindowCallback.onCreatePanelMenu(AppCompatDelegateImpl.java:2549)
+	at android.support.v7.view.WindowCallbackWrapper.onCreatePanelMenu(WindowCallbackWrapper.java:94)
+	at android.support.v7.app.ToolbarActionBar.populateOptionsMenu(ToolbarActionBar.java:455)
+	at android.support.v7.app.ToolbarActionBar$1.run(ToolbarActionBar.java:56)
+	at android.view.Choreographer$CallbackRecord.run(Choreographer.java:911)
+	at android.view.Choreographer.doCallbacks(Choreographer.java:723)
+	at android.view.Choreographer.doFrame(Choreographer.java:655)
+	at android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:897)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1472484764
+FATAL EXCEPTION: main
+java.lang.NullPointerException: Attempt to invoke virtual method 'android.net.Uri eu.siacs.conversations.entities.Contact.getSystemAccount()' on a null object reference
+	at eu.siacs.conversations.ui.ContactDetailsActivity.onOptionsItemSelected(ContactDetailsActivity.java:256)
+	at android.app.Activity.onMenuItemSelected(Activity.java:3527)
+	at android.support.v4.app.FragmentActivity.onMenuItemSelected(FragmentActivity.java:436)
+	at android.support.v7.app.AppCompatActivity.onMenuItemSelected(AppCompatActivity.java:196)
+	at android.support.v7.view.WindowCallbackWrapper.onMenuItemSelected(WindowCallbackWrapper.java:109)
+	at android.support.v7.view.WindowCallbackWrapper.onMenuItemSelected(WindowCallbackWrapper.java:109)
+	at android.support.v7.app.ToolbarActionBar$2.onMenuItemClick(ToolbarActionBar.java:64)
+	at android.support.v7.widget.Toolbar$1.onMenuItemClick(Toolbar.java:204)
+	at android.support.v7.widget.ActionMenuView$MenuBuilderCallback.onMenuItemSelected(ActionMenuView.java:781)
+	at android.support.v7.view.menu.MenuBuilder.dispatchMenuItemSelected(MenuBuilder.java:840)
+	at android.support.v7.view.menu.MenuItemImpl.invoke(MenuItemImpl.java:158)
+	at android.support.v7.view.menu.MenuBuilder.performItemAction(MenuBuilder.java:991)
+	at android.support.v7.view.menu.MenuBuilder.performItemAction(MenuBuilder.java:981)
+	at android.support.v7.widget.ActionMenuView.invokeItem(ActionMenuView.java:625)
+	at android.support.v7.view.menu.ActionMenuItemView.onClick(ActionMenuItemView.java:151)
+	at android.view.View.performClick(View.java:6897)
+	at android.widget.TextView.performClick(TextView.java:12693)
+	at android.view.View$PerformClick.run(View.java:26101)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+------------------------------------------------------------------------
+

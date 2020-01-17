@@ -1,0 +1,94 @@
+BugInfo:
+hash:2044519012
+FATAL EXCEPTION: main
+java.lang.IllegalStateException: Fragment already added: CreatePrivateGroupChatDialog{fe0cfea #3 dialog}
+	at android.support.v4.app.FragmentManagerImpl.addFragment(FragmentManager.java:1916)
+	at android.support.v4.app.BackStackRecord.executePopOps(BackStackRecord.java:828)
+	at android.support.v4.app.FragmentManagerImpl.executeOps(FragmentManager.java:2622)
+	at android.support.v4.app.FragmentManagerImpl.executeOpsTogether(FragmentManager.java:2411)
+	at android.support.v4.app.FragmentManagerImpl.removeRedundantOperationsAndExecute(FragmentManager.java:2366)
+	at android.support.v4.app.FragmentManagerImpl.execPendingActions(FragmentManager.java:2273)
+	at android.support.v4.app.FragmentManagerImpl$1.run(FragmentManager.java:733)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1875108841
+FATAL EXCEPTION: main
+java.lang.NoSuchMethodError: No virtual method v2S3FileTransfer()Z in class Leu/siacs/conversations/xmpp/XmppConnection$Features; or its super classes (declaration of 'eu.siacs.conversations.xmpp.XmppConnection$Features' appears in base.apk)
+	at eu.siacs.conversations.entities.Account.httpUploadAvailable(Account.java:145)
+	at eu.siacs.conversations.entities.Account.httpUploadAvailable(Account.java:149)
+	at eu.siacs.conversations.ui.util.SendButtonTool.getAction(SendButtonTool.java:51)
+	at eu.siacs.conversations.ui.ConversationFragment.updateSendButton(ConversationFragment.java:2265)
+	at eu.siacs.conversations.ui.ConversationFragment.refresh(ConversationFragment.java:2198)
+	at eu.siacs.conversations.ui.ConversationFragment.reInit(ConversationFragment.java:1932)
+	at eu.siacs.conversations.ui.ConversationFragment.onStart(ConversationFragment.java:1823)
+	at android.app.Fragment.performStart(Fragment.java:2637)
+	at android.app.FragmentManagerImpl.moveToState(FragmentManager.java:1312)
+	at android.app.FragmentManagerImpl.addAddedFragments(FragmentManager.java:2421)
+	at android.app.FragmentManagerImpl.executeOpsTogether(FragmentManager.java:2200)
+	at android.app.FragmentManagerImpl.removeRedundantOperationsAndExecute(FragmentManager.java:2154)
+	at android.app.FragmentManagerImpl.execPendingActions(FragmentManager.java:2055)
+	at android.app.FragmentManagerImpl$1.run(FragmentManager.java:718)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+------------------------------------------------------------------------
+
+BugInfo:
+hash:911861619
+FATAL EXCEPTION: main
+java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String android.content.Context.getPackageName()' on a null object reference
+	at android.preference.PreferenceManager.getDefaultSharedPreferencesName(PreferenceManager.java:537)
+	at android.preference.PreferenceManager.getDefaultSharedPreferences(PreferenceManager.java:526)
+	at eu.siacs.conversations.ui.ConversationFragment.updateSendButton(ConversationFragment.java:2257)
+	at eu.siacs.conversations.ui.-$$Lambda$7Up5G8SvG8uZ-hUn5jSiCHqb0l8.run(Unknown Source:5)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1660793111
+FATAL EXCEPTION: main
+android.view.WindowManager$BadTokenException: Unable to add window -- window android.view.ViewRootImpl$W@b0076f7 has already been added
+	at android.view.ViewRootImpl.setView(ViewRootImpl.java:970)
+	at android.view.WindowManagerGlobal.addView(WindowManagerGlobal.java:381)
+	at android.view.WindowManagerImpl.addView(WindowManagerImpl.java:100)
+	at android.app.Dialog.show(Dialog.java:420)
+	at eu.siacs.conversations.ui.ChannelDiscoveryActivity.onChannelSearchResult(ChannelDiscoveryActivity.java:196)
+	at eu.siacs.conversations.ui.adapter.ChannelSearchResultAdapter.lambda$onBindViewHolder$0$ChannelSearchResultAdapter(ChannelSearchResultAdapter.java:66)
+	at eu.siacs.conversations.ui.adapter.-$$Lambda$ChannelSearchResultAdapter$19hXDLBpQ5aNBoFCVEqNfSQZQ58.onClick(Unknown Source:10)
+	at android.view.View.performClick(View.java:6897)
+	at android.view.View$PerformClick.run(View.java:26101)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+------------------------------------------------------------------------
+

@@ -99,7 +99,7 @@ class PreProcess:
 		files = os.listdir(self.outPath)
 		for name in files:
 			if "_ins.apk" in name :
-				cmd = "adb install " +self.outPath+os.sep+name
+				cmd = "adb install -g " +self.outPath+os.sep+name 
 				os.system(cmd)
 #main function
 if  __name__ == '__main__':   

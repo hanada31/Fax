@@ -1,0 +1,58 @@
+BugInfo:
+hash:-206946748
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{de.danoeh.antennapod/de.danoeh.antennapod.activity.DownloadAuthenticationActivity}: java.lang.IllegalArgumentException: Download request missing
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.IllegalArgumentException: Download request missing
+	at org.apache.commons.lang3.Validate.isTrue(Validate.java:158)
+	at de.danoeh.antennapod.activity.DownloadAuthenticationActivity.onCreate(DownloadAuthenticationActivity.java:58)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+32	de.danoeh.antennapod.activity.DownloadAuthenticationActivity	null;;null;;null;;null;;
+
+35	de.danoeh.antennapod.activity.DownloadAuthenticationActivity	null;;null;;null;;null;;boolean->send_to_downloadrequester->true,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1721438072
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to resume activity {de.danoeh.antennapod/de.danoeh.antennapod.activity.MainActivity}: java.lang.NullPointerException: Attempt to read from field 'long de.danoeh.antennapod.core.feed.FeedComponent.id' on a null object reference
+	at android.app.ActivityThread.performResumeActivity(ActivityThread.java:3790)
+	at android.app.ActivityThread.handleResumeActivity(ActivityThread.java:3830)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3038)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.NullPointerException: Attempt to read from field 'long de.danoeh.antennapod.core.feed.FeedComponent.id' on a null object reference
+	at de.danoeh.antennapod.activity.MainActivity.loadFragment(MainActivity.java:3017)
+	at de.danoeh.antennapod.activity.MainActivity.handleNavIntent(MainActivity.java:805)
+	at de.danoeh.antennapod.activity.MainActivity.onResume(MainActivity.java:480)
+	at android.app.Instrumentation.callActivityOnResume(Instrumentation.java:1361)
+	at android.app.Activity.performResume(Activity.java:7415)
+	at android.app.ActivityThread.performResumeActivity(ActivityThread.java:3765)
+	... 10 more
+
+ICC Msgs:
+59	de.danoeh.antennapod.activity.MainActivity	null;;null;;null;;null;;String->fragment_tag->abcde,int->nav_index->Integer.MAX_VALUE,long->fragment_feed_id->0,
+
+------------------------------------------------------------------------
+

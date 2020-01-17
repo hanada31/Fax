@@ -1,0 +1,339 @@
+
+BugInfo:
+hash:-1699027989
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.etesync.syncadapter/com.etesync.syncadapter.ui.WebViewActivity}: java.lang.NullPointerException: Attempt to invoke virtual method 'android.net.Uri$Builder android.net.Uri.buildUpon()' on a null object reference
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'android.net.Uri$Builder android.net.Uri.buildUpon()' on a null object reference
+	at com.etesync.syncadapter.ui.WebViewActivity.addQueryParams(WebViewActivity.kt:82)
+	at com.etesync.syncadapter.ui.WebViewActivity.onCreate(WebViewActivity.kt:33)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+54	com.etesync.syncadapter.ui.WebViewActivity	null;;null;;null;;null;;
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:84410629
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.etesync.syncadapter/com.etesync.syncadapter.ui.JournalItemActivity}: kotlin.KotlinNullPointerException
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: kotlin.KotlinNullPointerException
+	at com.etesync.syncadapter.ui.JournalItemActivity.onCreate(JournalItemActivity.kt:69)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+34	com.etesync.syncadapter.ui.JournalItemActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),Extras->ExtrasObj->ExtrasObj,(,),Extras->ExtrasObj->ExtrasObj,(,Serializable->syncEntry->SerializableObj,),
+
+38	com.etesync.syncadapter.ui.JournalItemActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,),
+
+31	com.etesync.syncadapter.ui.JournalItemActivity	null;;null;;null;;null;;
+
+42	com.etesync.syncadapter.ui.JournalItemActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,),Extras->ExtrasObj->ExtrasObj,(,Serializable->syncEntry->SerializableObj,),
+
+44	com.etesync.syncadapter.ui.JournalItemActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),Extras->ExtrasObj->ExtrasObj,(,Serializable->syncEntry->SerializableObj,),Extras->ExtrasObj->ExtrasObj,(,Parcelable->account->ParcelableObj,),
+
+41	com.etesync.syncadapter.ui.JournalItemActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),Extras->ExtrasObj->ExtrasObj,(,Serializable->syncEntry->SerializableObj,),
+
+37	com.etesync.syncadapter.ui.JournalItemActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),
+
+36	com.etesync.syncadapter.ui.JournalItemActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->syncEntry->SerializableObj,),Extras->ExtrasObj->ExtrasObj,(,Parcelable->account->ParcelableObj,),
+
+40	com.etesync.syncadapter.ui.JournalItemActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),Extras->ExtrasObj->ExtrasObj,(,Parcelable->account->ParcelableObj,),
+
+35	com.etesync.syncadapter.ui.JournalItemActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->syncEntry->SerializableObj,),
+
+45	com.etesync.syncadapter.ui.JournalItemActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,),Extras->ExtrasObj->ExtrasObj,(,Serializable->syncEntry->SerializableObj,),Extras->ExtrasObj->ExtrasObj,(,Parcelable->account->ParcelableObj,),
+
+33	com.etesync.syncadapter.ui.JournalItemActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),Extras->ExtrasObj->ExtrasObj,(,),Extras->ExtrasObj->ExtrasObj,(,Parcelable->account->ParcelableObj,),
+
+32	com.etesync.syncadapter.ui.JournalItemActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),Extras->ExtrasObj->ExtrasObj,(,),
+
+39	com.etesync.syncadapter.ui.JournalItemActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),
+
+43	com.etesync.syncadapter.ui.JournalItemActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),Extras->ExtrasObj->ExtrasObj,(,Serializable->syncEntry->SerializableObj,),
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:759963398
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.etesync.syncadapter/com.etesync.syncadapter.ui.ViewCollectionActivity}: kotlin.KotlinNullPointerException
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: kotlin.KotlinNullPointerException
+	at com.etesync.syncadapter.ui.ViewCollectionActivity.onCreate(ViewCollectionActivity.kt:99)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+13	com.etesync.syncadapter.ui.ViewCollectionActivity	null;;null;;null;;null;;
+
+16	com.etesync.syncadapter.ui.ViewCollectionActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),Extras->ExtrasObj->ExtrasObj,(,Parcelable->account->ParcelableObj,),
+
+15	com.etesync.syncadapter.ui.ViewCollectionActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),
+
+17	com.etesync.syncadapter.ui.ViewCollectionActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,),Extras->ExtrasObj->ExtrasObj,(,Parcelable->account->ParcelableObj,),
+
+14	com.etesync.syncadapter.ui.ViewCollectionActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),Extras->ExtrasObj->ExtrasObj,(,),
+
+18	com.etesync.syncadapter.ui.ViewCollectionActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Parcelable->account->ParcelableObj,),
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-947418165
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.etesync.syncadapter/com.etesync.syncadapter.ui.CreateCollectionActivity}: kotlin.KotlinNullPointerException
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: kotlin.KotlinNullPointerException
+	at com.etesync.syncadapter.ui.CreateCollectionActivity.onCreate(CreateCollectionActivity.kt:37)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+69	com.etesync.syncadapter.ui.CreateCollectionActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),Extras->ExtrasObj->ExtrasObj,(,Parcelable->account->ParcelableObj,),
+
+67	com.etesync.syncadapter.ui.CreateCollectionActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),Extras->ExtrasObj->ExtrasObj,(,),
+
+66	com.etesync.syncadapter.ui.CreateCollectionActivity	null;;null;;null;;null;;
+
+71	com.etesync.syncadapter.ui.CreateCollectionActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Parcelable->account->ParcelableObj,),
+
+70	com.etesync.syncadapter.ui.CreateCollectionActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,),Extras->ExtrasObj->ExtrasObj,(,Parcelable->account->ParcelableObj,),
+
+68	com.etesync.syncadapter.ui.CreateCollectionActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-517354120
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.etesync.syncadapter/com.etesync.syncadapter.ui.AccountSettingsActivity}: kotlin.UninitializedPropertyAccessException: lateinit property account has not been initialized
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: kotlin.UninitializedPropertyAccessException: lateinit property account has not been initialized
+	at com.etesync.syncadapter.ui.AccountSettingsActivity.onCreate(AccountSettingsActivity.kt:40)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+93	com.etesync.syncadapter.ui.AccountSettingsActivity	null;;null;;null;;null;;
+
+95	com.etesync.syncadapter.ui.AccountSettingsActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,),
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-383203018
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.etesync.syncadapter/com.etesync.syncadapter.ui.AccountActivity}: kotlin.UninitializedPropertyAccessException: lateinit property account has not been initialized
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: kotlin.UninitializedPropertyAccessException: lateinit property account has not been initialized
+	at com.etesync.syncadapter.ui.AccountActivity.onCreate(AccountActivity.kt:83)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+21	com.etesync.syncadapter.ui.AccountActivity	null;;null;;null;;null;;
+
+23	com.etesync.syncadapter.ui.AccountActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,),
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:400828075
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.etesync.syncadapter/com.etesync.syncadapter.ui.importlocal.ImportActivity}: kotlin.KotlinNullPointerException
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: kotlin.KotlinNullPointerException
+	at com.etesync.syncadapter.ui.importlocal.ImportActivity.onCreate(ImportActivity.kt:29)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+75	com.etesync.syncadapter.ui.importlocal.ImportActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),Extras->ExtrasObj->ExtrasObj,(,),
+
+78	com.etesync.syncadapter.ui.importlocal.ImportActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,),Extras->ExtrasObj->ExtrasObj,(,Parcelable->account->ParcelableObj,),
+
+74	com.etesync.syncadapter.ui.importlocal.ImportActivity	null;;null;;null;;null;;
+
+77	com.etesync.syncadapter.ui.importlocal.ImportActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),Extras->ExtrasObj->ExtrasObj,(,Parcelable->account->ParcelableObj,),
+
+76	com.etesync.syncadapter.ui.importlocal.ImportActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),
+
+79	com.etesync.syncadapter.ui.importlocal.ImportActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Parcelable->account->ParcelableObj,),
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:190443419
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.etesync.syncadapter/com.etesync.syncadapter.ui.CollectionMembersActivity}: kotlin.KotlinNullPointerException
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: kotlin.KotlinNullPointerException
+	at com.etesync.syncadapter.ui.CollectionMembersActivity.onCreate(CollectionMembersActivity.kt:71)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+2	com.etesync.syncadapter.ui.CollectionMembersActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),Extras->ExtrasObj->ExtrasObj,(,),
+
+6	com.etesync.syncadapter.ui.CollectionMembersActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Parcelable->account->ParcelableObj,),
+
+5	com.etesync.syncadapter.ui.CollectionMembersActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,),Extras->ExtrasObj->ExtrasObj,(,Parcelable->account->ParcelableObj,),
+
+3	com.etesync.syncadapter.ui.CollectionMembersActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),
+
+4	com.etesync.syncadapter.ui.CollectionMembersActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Serializable->collectionInfo->SerializableObj,),Extras->ExtrasObj->ExtrasObj,(,Parcelable->account->ParcelableObj,),
+
+1	com.etesync.syncadapter.ui.CollectionMembersActivity	null;;null;;null;;null;;
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-29147042
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.etesync.syncadapter/com.etesync.syncadapter.ui.EditCollectionActivity}: kotlin.KotlinNullPointerException
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: kotlin.KotlinNullPointerException
+	at com.etesync.syncadapter.ui.CreateCollectionActivity.onCreate(CreateCollectionActivity.kt:37)
+	at com.etesync.syncadapter.ui.EditCollectionActivity.onCreate(EditCollectionActivity.kt:30)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+90	com.etesync.syncadapter.ui.EditCollectionActivity	null;;null;;null;;null;;
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1240065851
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.etesync.syncadapter/com.etesync.syncadapter.ui.ChangeEncryptionPasswordActivity}: kotlin.KotlinNullPointerException
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: kotlin.KotlinNullPointerException
+	at com.etesync.syncadapter.ui.ChangeEncryptionPasswordActivity.onCreate(ChangeEncryptionPasswordActivity.kt:40)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+82	com.etesync.syncadapter.ui.ChangeEncryptionPasswordActivity	null;;null;;null;;null;;
+
+84	com.etesync.syncadapter.ui.ChangeEncryptionPasswordActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,Parcelable->account->ParcelableObj,),
+
+83	com.etesync.syncadapter.ui.ChangeEncryptionPasswordActivity	null;;null;;null;;null;;Extras->ExtrasObj->ExtrasObj,(,),
+
+------------------------------------------------------------------------
+

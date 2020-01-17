@@ -32,36 +32,36 @@ Effective Testing of Android Applications by Constructing Activity Launching Con
 
 * Preprocess
 Put the apk under test under the [apk_input_dir], and get the result in the [apk_output_dir].
-python  script/0_prerocess.py  [apk_input_dir]  [apk_output_dir]
-e.g., python  script/0_prerocess.py  apk  apk_processed
+python  script/Prerocess.py  [apk_input_dir]  [apk_output_dir]
+e.g., python  script/Prerocess.py  apk  apk_processed
 Then the activities will be exposed, the app will be instrumented, and then installed on the device.
-Please log in the app first and grant all the permission that the app asked.
-Turn the setting item "developer mode" on and allow "usb debugging".
+For log-in required apps, you can log-in first to improve the exploration coverage.
+Do not forge to turn the setting item "developer mode" on and allow "usb debugging".
 
 * Test Generation
-python  script/1_generateTestCases.py  lib/Fax0108.jar [apk_input_dir]  [testcase_dir] [execute_info_dir] [max_number_of_path]
-e.g., python  script/1_generateTestCases.py  lib/Fax0108.jar  apk Result_testGen  executeInfo 10000 
+python  script/GenerateTestCases.py  lib/Fax0108.jar [apk_input_dir]  [testcase_dir] [execute_info_dir] [max_number_of_path]
+e.g., python  script/GenerateTestCases.py  lib/Fax0108.jar  apk Result_testGen  executeInfo 10000 
 
 * Fax Launching Test
-python script/2_launchActs.py [testcase_dir]  [launch_dir] 
-e.g., python script/2_launchActs.py Result_testGen Result_launch
+python script/LaunchActs.py [testcase_dir]  [launch_dir] 
+e.g., python script/LaunchActs.py Result_testGen Result_launch
 
 * Detect Crashes for Fax Launching
-python script/3_findCrashes.py [testcase_dir]  [launch_dir] 
-e.g., python script/3_findCrashes.py Result_testGen Result_launch
+python script/FindCrashes.py [testcase_dir]  [launch_dir] 
+e.g., python script/FindCrashes.py Result_testGen Result_launch
 
 * Fax Exploration Test
-python script/5_FairAndroidExploer.py [launch_dir]  [explore_dir]  [testcase_dir] [apk_output_dir] [EA/All]
+python script/FairAndroidExploer.py [launch_dir]  [explore_dir]  [testcase_dir] [apk_output_dir] [EA/All]
 Set EA if you want to set only EA as the exploration entry.
 Set All if you want to set all activities as the exploration entry.
-e.g., python script/5_FairAndroidExploer.py Result_launch Result_explore_EA Result_testGen apk_processed EA
+e.g., python script/FairAndroidExploer.py Result_launch Result_explore Result_testGen apk_processed ALL
 
 * Detect Crashes for Fax Exploration
-python script/2_launchActs.py [testcase_dir]  [explore_dir] 
-e.g., python script/3_findCrashes.py Result_testGen  Result_explore_EA
+python script/FindCrashes.py [testcase_dir]  [explore_dir] 
+e.g., python script/FindCrashes.py Result_testGen  Result_explore
 
 * Calculate Coverage Result
-python script/7_collectLogcat.py  [testcase_dir]  [explore_dir]  [apk_output_dir]
-e.g., python script/7_collectLogcat.py  Result_testGen  Result_explore_EA apk_processed
+python script/CollectLogcat.py  [testcase_dir]  [explore_dir]  [apk_output_dir]
+e.g., python script/CollectLogcat.py  Result_testGen  Result_explore apk_processed
 
 
