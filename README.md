@@ -1,5 +1,7 @@
 A README.md main file describing what the artifact does and where it can be obtained (with hidden links and access password if necessary). Also, there should be a clear description of how to reproduce the results presented in the paper.
 
+This artifact for our companion paper “Multiple-Entry Testing of Android Applications by Constructing Activity Launching Contexts (#1422)”
+
 # Fax (Fair Android Explorer)
 Effective Testing of Android Applications by Constructing Activity Launching Contexts
 
