@@ -56,8 +56,8 @@ class BugDetector:
 							i = j
 						else:
 							i = i+1
-					if "Parcelable encountered ClassNotFoundException" in log2 or "ClassNotFoundException when unmarshalling" in log2:
-						continue
+					#if "Parcelable encountered ClassNotFoundException" in log2 or "ClassNotFoundException when unmarshalling" in log2:
+						#continue
 					if(len(log2)>0):
 						if log2 not in logDict.keys():
 							logDict[log2] = set()
