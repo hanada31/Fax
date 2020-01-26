@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.csipsimple.widgets.EditSipUri android:gravity="center_horizontal" android:id="@id/sip_uri" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.0" style="@style/ButtonBar.AlertDialog">
+        <Button android:id="@id/cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="0.5" style="?android:attr/buttonBarButtonStyle" />
+        <Button android:id="@id/ok" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ok" android:layout_weight="0.5" style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

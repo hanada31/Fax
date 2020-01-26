@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:numeric="signed" android:title="@string/snd_auto_close_time" android:key="snd_auto_close_time" android:summary="@string/snd_auto_close_time_desc" android:defaultValue="1" />
+    <CheckBoxPreference android:title="@string/use_webrtc_hack" android:key="use_webrtc_hack" android:summary="@string/use_webrtc_hack_desc" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/use_routing_api" android:key="use_routing_api" android:summary="@string/use_routing_api_desc" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/use_mode_api" android:key="use_mode_api" android:summary="@string/use_mode_api_desc" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/use_sgs_call_hack" android:key="use_sgs_call_hack" android:summary="@string/use_sgs_call_hack_desc" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/set_audio_generate_tone" android:key="set_audio_generate_tone" android:summary="@string/set_audio_generate_tone_desc" android:defaultValue="false" />
+    <CheckBoxPreference android:title="@string/do_focus_audio" android:key="do_focus_audio" android:summary="@string/do_focus_audio_desc" android:defaultValue="true" />
+    <ListPreference android:entries="@array/micro_source_choices" android:title="@string/micro_source" android:key="micro_source" android:summary="@string/micro_source_desc" android:defaultValue="1" android:entryValues="@array/micro_source_values" />
+    <ListPreference android:entries="@array/sip_audio_mode_choices" android:title="@string/sip_audio_mode" android:key="sip_audio_mode" android:summary="@string/sip_audio_mode_desc" android:defaultValue="0" android:entryValues="@array/sip_audio_mode_values" />
+    <CheckBoxPreference android:title="@string/restart_aud_on_routing_change" android:key="restart_aud_on_routing_change" android:summary="@string/restart_aud_on_routing_change_desc" android:defaultValue="true" />
+    <ListPreference android:entries="@array/audio_implementation_choices" android:title="@string/audio_implementation" android:key="audio_implementation" android:summary="@string/audio_implementation_desc" android:defaultValue="0" android:entryValues="@array/audio_implementation_values" />
+</PreferenceScreen>

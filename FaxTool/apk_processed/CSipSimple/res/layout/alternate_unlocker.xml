@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="center_vertical" android:background="@drawable/end_call_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <FrameLayout android:id="@id/declineCallButton" android:background="?actionBarItemBackground" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/decline_call" android:drawableTop="@drawable/ic_end_call" />
+        </FrameLayout>
+    </FrameLayout>
+    <FrameLayout android:background="@drawable/take_call_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <FrameLayout android:id="@id/takeCallButton" android:background="?actionBarItemBackground" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/take_call" android:drawableTop="@drawable/ic_dial_action_call" />
+        </FrameLayout>
+    </FrameLayout>
+</merge>

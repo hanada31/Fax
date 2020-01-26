@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/takeCallButton" android:title="@string/take_call" android:showAsAction="never" />
+    <item android:id="@id/declineCallButton" android:title="@string/decline_call" android:showAsAction="never" />
+    <item android:id="@id/clearCallButton" android:title="@string/clear_call" android:showAsAction="never" />
+    <item android:id="@id/xferCallButton" android:title="@string/xfer_uri" android:showAsAction="never" />
+    <item android:id="@id/transferCallButton" android:title="@string/transfer_to_call" android:showAsAction="never" />
+    <item android:id="@id/holdCallButton" android:title="@string/hold_call" android:showAsAction="never" />
+    <item android:id="@id/recordCallButton" android:title="@string/record" android:showAsAction="never" />
+    <item android:icon="@drawable/ic_ab_dialpad" android:id="@id/dtmfCallButton" android:title="@string/send_dtmf" android:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_prefs_media_video" android:id="@id/videoCallButton" android:title="@string/video" android:showAsAction="ifRoom" />
+    <item android:icon="@android:drawable/ic_menu_info_details" android:id="@id/detailedDisplayCallButton" android:title="@string/info" android:showAsAction="ifRoom" />
+</menu>

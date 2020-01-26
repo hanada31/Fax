@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <header android:icon="@drawable/ic_prefs_fast" android:title="@string/prefs_fast" android:summary="@string/prefs_fast_desc" />
+    <header android:icon="@drawable/ic_prefs_network" android:title="@string/prefs_network" android:summary="@string/prefs_network_desc" android:fragment="com.csipsimple.ui.prefs.hc.PrefsLoaderFragment">
+        <extra android:name="preference_type" android:value="20" />
+    </header>
+    <header android:icon="@drawable/ic_prefs_media" android:title="@string/prefs_media" android:summary="@string/prefs_media_desc" android:fragment="com.csipsimple.ui.prefs.hc.PrefsLoaderFragment">
+        <extra android:name="preference_type" android:value="0" />
+    </header>
+    <header android:icon="@drawable/ic_prefs_ui" android:title="@string/prefs_ui" android:summary="@string/prefs_ui_desc" android:fragment="com.csipsimple.ui.prefs.hc.PrefsLoaderFragment">
+        <extra android:name="preference_type" android:value="60" />
+    </header>
+    <header android:icon="@drawable/ic_prefs_calls" android:title="@string/prefs_calls" android:summary="@string/prefs_calls_desc" android:fragment="com.csipsimple.ui.prefs.hc.PrefsLoaderFragment">
+        <extra android:name="preference_type" android:value="40" />
+    </header>
+    <header android:icon="@drawable/ic_prefs_filter" android:title="@string/filters" android:summary="@string/filters_desc" />
+</preference-headers>

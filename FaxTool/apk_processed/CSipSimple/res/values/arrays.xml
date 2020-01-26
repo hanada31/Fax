@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_smiley_names">
+        <item>Happy</item>
+        <item>Sad</item>
+        <item>Winking</item>
+        <item>Tongue sticking out</item>
+        <item>Surprised</item>
+        <item>Kissing</item>
+        <item>Yelling</item>
+        <item>Cool</item>
+        <item>Money mouth</item>
+        <item>Foot in mouth</item>
+        <item>Embarrassed</item>
+        <item>Angel</item>
+        <item>Undecided</item>
+        <item>Crying</item>
+        <item>Lips are sealed</item>
+        <item>Laughing</item>
+        <item>Confused</item>
+    </string-array>
+    <string-array name="presence_status_names">
+        <item>@string/online</item>
+        <item>@string/offline</item>
+    </string-array>
+    <string-array name="sip_data_sources">
+        <item>@string/uri_nbr</item>
+        <item>@string/uri_im</item>
+    </string-array>
+    <string-array name="filters_action">
+        <item>@string/cant_call</item>
+        <item>@string/rewrite</item>
+        <item>@string/stop_processing</item>
+        <item>@string/direct_call</item>
+        <item>@string/auto_answer</item>
+    </string-array>
+    <string-array name="filters_type">
+        <item>@string/starts_with</item>
+        <item>@string/ends_with</item>
+        <item>@string/contains</item>
+        <item>@string/all</item>
+        <item>@string/has_exactly_n_digits</item>
+        <item>@string/has_more_than_n_digits</item>
+        <item>@string/is_exactly</item>
+        <item>@string/custom_regexp</item>
+        <item>@string/bluetooth</item>
+    </string-array>
+    <string-array name="replace_type">
+        <item>@string/prefix_by</item>
+        <item>@string/suffix_with</item>
+        <item>@string/replace_match_by</item>
+        <item>@string/replace_all_by</item>
+        <item>@string/custom_regexp</item>
+    </string-array>
+    <string-array name="default_smiley_texts">
+        <item>:-)</item>
+        <item>:-(</item>
+        <item>;-)</item>
+        <item>:-P</item>
+        <item>=-O</item>
+        <item>:-*</item>
+        <item>:O</item>
+        <item>B-)</item>
+        <item>:-$</item>
+        <item>:-!</item>
+        <item>:-[</item>
+        <item>O:-)</item>
+        <item>:-\\</item>
+        <item>":'("</item>
+        <item>:-X</item>
+        <item>:-D</item>
+        <item>o_O</item>
+    </string-array>
+    <string-array name="scheme_values">
+        <item>Digest</item>
+        <item>PGP</item>
+    </string-array>
+    <string-array name="scheme_choices">
+        <item>@string/digest</item>
+        <item>@string/pgp</item>
+    </string-array>
+    <string-array name="data_type_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="data_type_choices">
+        <item>@string/plain_password</item>
+        <item>@string/data_digest</item>
+    </string-array>
+    <string-array name="clock_rate_values">
+        <item>8000</item>
+        <item>16000</item>
+        <item>32000</item>
+        <item>44100</item>
+    </string-array>
+    <string-array name="clock_rate_choices">
+        <item>8KHz</item>
+        <item>16KHz</item>
+        <item>32KHz</item>
+        <item>44.1KHz</item>
+    </string-array>
+    <string-array name="use_srtp_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="use_srtp_choices">
+        <item>@string/disabled</item>
+        <item>@string/optional</item>
+        <item>@string/mandatory</item>
+    </string-array>
+    <string-array name="use_srtp_acc_values">
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="use_srtp_acc_choices">
+        <item>@string/default_str</item>
+        <item>@string/disabled</item>
+        <item>@string/optional</item>
+        <item>@string/mandatory</item>
+    </string-array>
+    <string-array name="dtmf_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="dtmf_mode_choices">
+        <item>@string/auto</item>
+        <item>@string/rtp</item>
+        <item>@string/in_band</item>
+        <item>@string/sip_info</item>
+    </string-array>
+    <string-array name="contact_rewrite_method_values">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="contact_rewrite_method_choices">
+        <item>@string/legacy</item>
+        <item>@string/normal</item>
+    </string-array>
+    <string-array name="transport_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="transport_choices">
+        <item>@string/auto</item>
+        <item>UDP</item>
+        <item>TCP</item>
+        <item>TLS</item>
+    </string-array>
+    <string-array name="tls_method_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>23</item>
+    </string-array>
+    <string-array name="tls_method_choices">
+        <item>@string/auto</item>
+        <item>TLSv1</item>
+        <item>SSLv2</item>
+        <item>SSL3</item>
+        <item>SSL23</item>
+    </string-array>
+    <string-array name="sip_audio_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="gsm_integration_type_choices">
+        <item>@string/auto</item>
+        <item>@string/force</item>
+        <item>@string/prevent</item>
+    </string-array>
+    <string-array name="sip_audio_mode_choices">
+        <item>NORMAL</item>
+        <item>RINGTONE</item>
+        <item>IN_CALL</item>
+        <item>IN_COMMUNICATION</item>
+    </string-array>
+    <string-array name="micro_source_values">
+        <item>0</item>
+        <item>1</item>
+        <item>4</item>
+        <item>7</item>
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="micro_source_choices">
+        <item>DEFAULT</item>
+        <item>MIC</item>
+        <item>VOICE_CALL</item>
+        <item>VOICE_COMMUNICATION</item>
+        <item>VOICE_CALL_UP</item>
+        <item>VOICE_CALL_DOWN</item>
+        <item>CAMCORDER</item>
+        <item>VOICE_RECOGNITION</item>
+    </string-array>
+    <string-array name="gsm_integration_type_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="echo_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="echo_mode_choices">
+        <item>@string/auto</item>
+        <item>@string/speex</item>
+        <item>@string/simple</item>
+        <item>@string/webrtc</item>
+    </string-array>
+    <string-array name="dial_press_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="dial_press_mode_choices">
+        <item>@string/use_android_setting</item>
+        <item>@string/force</item>
+        <item>@string/prevent</item>
+    </string-array>
+    <string-array name="band_types">
+        <item>nb</item>
+        <item>wb</item>
+    </string-array>
+    <string-array name="band_types_name">
+        <item>@string/slow</item>
+        <item>@string/fast</item>
+    </string-array>
+    <string-array name="reg_use_proxy_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="reg_use_proxy_choices">
+        <item>@string/no_proxy</item>
+        <item>@string/outbound_proxies</item>
+        <item>@string/accounts_proxies</item>
+        <item>@string/all</item>
+    </string-array>
+    <string-array name="use_zrtp_values">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="use_zrtp_choices">
+        <item>@string/no_zrtp</item>
+        <item>@string/create_zrtp</item>
+    </string-array>
+    <string-array name="use_zrtp_acc_values">
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="use_zrtp_acc_choices">
+        <item>@string/default_str</item>
+        <item>@string/no_zrtp</item>
+        <item>@string/create_zrtp</item>
+    </string-array>
+    <string-array name="auto_on_off_values">
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="auto_on_off_choices">
+        <item>@string/default_str</item>
+        <item>@string/disabled</item>
+        <item>@string/force</item>
+    </string-array>
+    <string-array name="acc_stun_use_values">
+        <item>-1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="acc_stun_use_choices">
+        <item>@string/default_str</item>
+        <item>@string/disabled</item>
+    </string-array>
+    <string-array name="audio_implementation_values">
+        <item>0</item>
+    </string-array>
+    <string-array name="audio_implementation_choices">
+        <item>Java</item>
+    </string-array>
+</resources>

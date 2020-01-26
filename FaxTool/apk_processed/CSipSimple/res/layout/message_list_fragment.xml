@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/generic_list_progress_view" />
+    <FrameLayout android:id="@id/listContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ListView android:scrollbarStyle="outsideOverlay" android:id="@android:id/list" android:fadingEdge="none" android:fadingEdgeLength="@dimen/right_panel_fading_edge" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/right_panel_margin_left" android:layout_marginTop="@dimen/right_panel_margin_vertical" android:layout_marginBottom="@dimen/right_panel_margin_vertical" android:divider="@null" />
+        <Button android:textAppearance="?android:textAppearanceLarge" android:gravity="center" android:layout_gravity="center" android:id="@android:id/empty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_compose_new" android:drawableLeft="@drawable/ic_menu_msg_compose_holo_dark" android:drawablePadding="10.0dip" />
+    </FrameLayout>
+</FrameLayout>

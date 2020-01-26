@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/tls" android:key="tls">
+        <CheckBoxPreference android:title="@string/enable_tls" android:key="enable_tls" android:summary="@string/enable_tls_desc" android:defaultValue="false" />
+        <EditTextPreference android:numeric="integer" android:title="@string/network_tls_transport_port" android:key="network_tls_transport_port" android:summary="@string/network_tls_transport_port_desc" android:dependency="enable_tls" android:defaultValue="5061" />
+        <ListPreference android:entries="@array/tls_method_choices" android:title="@string/tls_method" android:key="tls_method" android:summary="@string/tls_method_desc" android:defaultValue="0" android:entryValues="@array/tls_method_values" />
+        <EditTextPreference android:title="@string/network_tls_server_name" android:key="network_tls_server_name" android:summary="@string/network_tls_server_name_desc" android:dependency="enable_tls" android:defaultValue="" />
+        <EditTextPreference android:title="@string/ca_list_file" android:key="ca_list_file" android:summary="@string/ca_list_file_desc" android:dependency="enable_tls" android:defaultValue="" />
+        <EditTextPreference android:title="@string/cert_file" android:key="cert_file" android:summary="@string/cert_file_desc" android:dependency="enable_tls" android:defaultValue="" />
+        <EditTextPreference android:title="@string/privkey_file" android:key="privkey_file" android:summary="@string/privkey_file_desc" android:dependency="enable_tls" android:defaultValue="" />
+        <EditTextPreference android:password="true" android:title="@string/tls_password" android:key="tls_password" android:summary="@string/tls_password_desc" android:dependency="enable_tls" android:defaultValue="" />
+        <CheckBoxPreference android:title="@string/verify_server" android:key="tls_verify_server" android:summary="@string/verify_server_desc" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/verify_client" android:key="tls_verify_client" android:summary="@string/verify_client_desc" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/secure_media" android:key="secure_media">
+        <ListPreference android:entries="@array/use_srtp_choices" android:title="@string/use_srtp" android:key="use_srtp" android:summary="@string/use_srtp_desc" android:defaultValue="0" android:entryValues="@array/use_srtp_values" />
+        <ListPreference android:entries="@array/use_zrtp_choices" android:title="@string/use_zrtp" android:key="use_zrtp" android:summary="@string/use_zrtp_desc" android:defaultValue="1" android:entryValues="@array/use_zrtp_values" />
+    </PreferenceCategory>
+</PreferenceScreen>

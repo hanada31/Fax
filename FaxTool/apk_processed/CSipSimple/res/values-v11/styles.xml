@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Sherlock.__Theme" parent="@android:style/Theme.Holo">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="Sherlock.__Theme.Light" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="LightTheme" parent="@style/Theme.Sherlock.Light" />
+    <style name="DarkTheme" parent="@style/Theme.Sherlock" />
+    <style name="ButtonBar" parent="@android:style/Holo.ButtonBar" />
+    <style name="ButtonBar.AlertDialog" parent="@android:style/Holo.ButtonBar.AlertDialog" />
+</resources>

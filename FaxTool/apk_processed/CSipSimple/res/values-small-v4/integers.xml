@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="dialpad_layout_weight_autocomplete_list">30</integer>
+</resources>

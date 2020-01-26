@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/audio_test_text" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/test_audio_prepare" />
+    <ImageView android:id="@id/tx_icon" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_speaker_dark" android:layout_below="@id/audio_test_text" android:contentDescription="@string/empty_description" />
+    <ProgressBar android:id="@id/tx_bar" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="255" android:layout_toRightOf="@id/tx_icon" android:layout_alignTop="@id/tx_icon" android:layout_alignBottom="@id/tx_icon" style="?android:attr/progressBarStyleHorizontal" />
+    <ImageView android:id="@id/rx_icon" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_micro_dark" android:layout_below="@id/tx_icon" android:contentDescription="@string/empty_description" />
+    <ProgressBar android:id="@id/rx_bar" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="255" android:layout_toRightOf="@id/rx_icon" android:layout_alignTop="@id/rx_icon" android:layout_alignBottom="@id/rx_icon" style="?android:attr/progressBarStyleHorizontal" />
+    <Button android:id="@id/cancel_bt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_below="@id/rx_icon" style="?android:attr/buttonBarButtonStyle" />
+</RelativeLayout>

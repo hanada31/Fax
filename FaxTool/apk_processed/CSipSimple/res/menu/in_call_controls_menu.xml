@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_sound_speakerphone_holo_dark" android:id="@id/speakerButton" android:title="@string/speaker" android:checkable="true" android:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_mute_holo_dark" android:id="@id/muteButton" android:title="@string/mute" android:checkable="true" android:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_sound_bluetooth_holo_dark" android:id="@id/bluetoothButton" android:title="@string/bluetooth" android:checkable="true" android:showAsAction="ifRoom" />
+    <item android:icon="@android:drawable/ic_menu_add" android:id="@id/addCallButton" android:title="@string/add_call" android:showAsAction="ifRoom" />
+    <item android:icon="@android:drawable/ic_menu_preferences" android:id="@id/mediaSettingsButton" android:title="@string/prefs_media" android:showAsAction="ifRoom" />
+</menu>

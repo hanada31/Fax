@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:singleLine="true" android:title="@string/w_common_display_name" android:key="display_name" android:summary="@string/w_common_display_name_desc" android:dialogMessage="@string/w_common_display_name_desc" android:inputType="textVisiblePassword" />
+    <EditTextPreference android:singleLine="true" android:title="@string/w_common_username" android:key="username" android:summary="@string/w_common_username_desc" android:dialogMessage="@string/w_common_username_desc" android:inputType="textVisiblePassword" />
+    <com.csipsimple.widgets.PasswordPreference android:password="true" android:singleLine="true" android:title="@string/w_common_password" android:key="password" android:summary="@string/w_common_password_desc" android:dialogMessage="@string/w_common_password_desc" />
+    <CheckBoxPreference android:title="@string/w_advanced_use_tcp" android:key="use_tcp" />
+</PreferenceScreen>

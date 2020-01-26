@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/topFieldText" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginBottom="10.0dip">
+        <AutoCompleteTextView android:textColor="#ffffffff" android:gravity="center|left" android:id="@id/dialtxt_user" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:hint="@string/type_sip_uri_or_autocomplete" android:lines="1" android:completionThreshold="1" android:layout_weight="1.0" android:inputType="textAutoComplete" android:dropDownWidth="fill_parent" android:imeOptions="actionGo" />
+        <com.csipsimple.widgets.AccountChooserButton android:id="@id/accountChooserButtonText" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="0.0" />
+    </LinearLayout>
+    <TextView android:gravity="center|right" android:id="@id/dialtxt_domain_helper" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ListView android:id="@id/autoCompleteList" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fastScrollEnabled="true" />
+</merge>

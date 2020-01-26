@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/item_status_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:src="@android:drawable/presence_offline" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="true" android:contentDescription="@string/empty_description" />
+    <TextView android:textAppearance="?android:textAppearanceLargePopupMenu" android:gravity="center_vertical" android:id="@id/item_status_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/item_status_icon" android:layout_centerVertical="true" style="?android:attr/dropDownItemStyle" />
+</RelativeLayout>

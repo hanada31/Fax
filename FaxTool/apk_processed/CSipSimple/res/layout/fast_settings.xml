@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbars="vertical" android:fadingEdge="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:orientation="horizontal" android:id="@id/row_glob_integrate" android:background="?actionBarItemBackground" android:padding="5.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/glob_integrate_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/android_integration" android:layout_toLeftOf="@id/glob_integrate" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="?android:textColorSecondary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/android_integration_desc" android:layout_toLeftOf="@id/glob_integrate" android:layout_below="@id/glob_integrate_text" />
+                <CheckBox android:layout_gravity="center_vertical" android:id="@id/glob_integrate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="6.0dip" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/availability_profile" style="?android:attr/listSeparatorTextViewStyle" />
+            <RelativeLayout android:orientation="horizontal" android:id="@id/row_glob_profile_always" android:background="?actionBarItemBackground" android:padding="5.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/glob_profile_always_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/always_available" android:layout_toLeftOf="@id/glob_profile_always" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="?android:textColorSecondary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/always_available_desc" android:layout_toLeftOf="@id/glob_profile_always" android:layout_below="@id/glob_profile_always_text" />
+                <RadioButton android:layout_gravity="center_vertical" android:id="@id/glob_profile_always" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="6.0dip" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <View android:gravity="fill_horizontal" android:background="@android:drawable/divider_horizontal_dark" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <RelativeLayout android:orientation="horizontal" android:id="@id/row_glob_profile_wifi" android:background="?actionBarItemBackground" android:padding="5.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/glob_profile_wifi_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_available" android:layout_toLeftOf="@id/glob_profile_wifi" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="?android:textColorSecondary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_available_desc" android:layout_toLeftOf="@id/glob_profile_wifi" android:layout_below="@id/glob_profile_wifi_text" />
+                <RadioButton android:layout_gravity="center_vertical" android:id="@id/glob_profile_wifi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="6.0dip" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <View android:gravity="fill_horizontal" android:background="@android:drawable/divider_horizontal_dark" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <RelativeLayout android:orientation="horizontal" android:id="@id/row_glob_profile_never" android:background="?actionBarItemBackground" android:padding="5.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/glob_profile_never_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/never_available" android:layout_toLeftOf="@id/glob_profile_never" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="?android:textColorSecondary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/never_available_desc" android:layout_toLeftOf="@id/glob_profile_never" android:layout_below="@id/glob_profile_never_text" />
+                <RadioButton android:layout_gravity="center_vertical" android:id="@id/glob_profile_never" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="6.0dip" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/availability_tg" style="?android:attr/listSeparatorTextViewStyle" />
+            <RelativeLayout android:orientation="horizontal" android:id="@id/row_glob_tg" android:background="?actionBarItemBackground" android:padding="5.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/glob_tg_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tg_allowed" android:layout_toLeftOf="@id/glob_tg" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="?android:textColorSecondary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tg_allowed_desc" android:layout_toLeftOf="@id/glob_tg" android:layout_below="@id/glob_tg_text" />
+                <CheckBox android:layout_gravity="center_vertical" android:id="@id/glob_tg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="6.0dip" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.0" style="@style/ButtonBar.AlertDialog">
+        <Button android:id="@id/save_bt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/save" />
+    </LinearLayout>
+</LinearLayout>

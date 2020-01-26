@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Spinner android:entries="@array/filters_action" android:id="@id/filter_action" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="vertical" android:id="@id/matcher_block" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/formWhiteBlock">
+                <Spinner android:entries="@array/filters_type" android:id="@id/matcher_type" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@id/filter_matches" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="text" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/replace_block" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/formWhiteBlock">
+                <Spinner android:entries="@array/replace_type" android:id="@id/replace_type" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@id/filter_replace" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="text" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.0" style="@style/ButtonBar">
+        <Button android:id="@id/cancel_bt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="0.5" />
+        <Button android:id="@id/save_bt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/save" android:layout_weight="0.5" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/generic_list_progress_view" />
+    <FrameLayout android:id="@id/listContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.csipsimple.widgets.DragnDropListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="false" />
+        <Button android:textAppearance="?android:textAppearanceLarge" android:gravity="center" android:layout_gravity="center" android:id="@android:id/empty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_account" android:drawableLeft="@android:drawable/ic_menu_add" android:drawablePadding="10.0dip" />
+    </FrameLayout>
+</FrameLayout>

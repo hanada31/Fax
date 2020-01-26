@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/quickaction_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" android:antialias="true" android:scaleType="fitCenter" android:layout_weight="1.0" android:contentDescription="@string/empty_description" />
+    <TextView android:textSize="12.0dip" android:textColor="#ffeeeeee" android:layout_gravity="center|top" android:id="@id/quickaction_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_weight="0.0" />
+</merge>

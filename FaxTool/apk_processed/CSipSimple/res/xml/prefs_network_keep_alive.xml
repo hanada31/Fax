@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:numeric="signed" android:title="@string/udp_keep_alive_interval_wifi" android:key="keep_alive_interval_wifi" android:summary="@string/keep_alive_interval_desc" android:defaultValue="100" />
+    <EditTextPreference android:numeric="signed" android:title="@string/udp_keep_alive_interval_mobile" android:key="keep_alive_interval_mobile" android:summary="@string/keep_alive_interval_desc" android:defaultValue="40" />
+    <EditTextPreference android:numeric="signed" android:title="@string/tcp_keep_alive_interval_wifi" android:key="tcp_keep_alive_interval_wifi" android:summary="@string/keep_alive_interval_desc" android:defaultValue="180" />
+    <EditTextPreference android:numeric="signed" android:title="@string/tcp_keep_alive_interval_mobile" android:key="tcp_keep_alive_interval_mobile" android:summary="@string/keep_alive_interval_desc" android:defaultValue="120" />
+    <EditTextPreference android:numeric="signed" android:title="@string/tls_keep_alive_interval_wifi" android:key="tls_keep_alive_interval_wifi" android:summary="@string/keep_alive_interval_desc" android:defaultValue="180" />
+    <EditTextPreference android:numeric="signed" android:title="@string/tls_keep_alive_interval_mobile" android:key="tls_keep_alive_interval_mobile" android:summary="@string/keep_alive_interval_desc" android:defaultValue="120" />
+</PreferenceScreen>

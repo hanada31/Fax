@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/mainFrame" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub android:id="@id/dropZones" android:layout="@layout/in_call_drop_zones" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/inCallContainer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="3.0">
+            <com.csipsimple.ui.incall.InCallInfoGrid android:id="@id/activeCallsGrid" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+            <com.csipsimple.ui.incall.InCallInfoGrid android:id="@id/heldCallsGrid" android:background="@drawable/in_call_held_background" android:padding="4.0dip" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+        <com.csipsimple.ui.incall.InCallAnswerControls android:id="@id/inCallAnswerControls" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0" />
+        <com.csipsimple.ui.incall.InCallControls android:id="@id/inCallControls" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.csipsimple.widgets.ScreenLocker android:id="@id/lockerOverlay" android:background="#88000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

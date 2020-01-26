@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="bottom" android:id="@id/entiere_line" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.csipsimple.widgets.DontPressWithParentLayout android:gravity="center" android:orientation="vertical" android:id="@id/grabber" android:layout_height="?android:listPreferredItemHeight" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="@style/list_left_column">
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/grabber" android:contentDescription="@string/empty_description" />
+    </com.csipsimple.widgets.DontPressWithParentLayout>
+    <ImageView android:id="@id/action_icon" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginBottom="8.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:contentDescription="@string/empty_description" />
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="marquee" android:id="@id/line1" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight" android:layout_marginLeft="9.0dip" android:layout_toLeftOf="@id/grabber" android:layout_toRightOf="@id/action_icon" android:layout_alignParentBottom="true" />
+</RelativeLayout>

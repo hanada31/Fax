@@ -1,0 +1,26 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: CSipSimple.apk
+compressionType: false
+doNotCompress:
+- resources.arsc
+- png
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '4'
+  targetSdkVersion: '16'
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  org/webrtc/videoengine/README: '8'
+  com/csipsimple/api/NOTICE: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.4.1
+versionInfo:
+  versionCode: '1841'
+  versionName: 0.04-01

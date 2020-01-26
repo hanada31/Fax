@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference android:entries="@array/band_types_name" android:title="@string/band_for_wifi" android:key="band_for_wifi" android:entryValues="@array/band_types" />
+    <ListPreference android:entries="@array/band_types_name" android:title="@string/band_for_3g" android:key="band_for_3g" android:entryValues="@array/band_types" />
+    <ListPreference android:entries="@array/band_types_name" android:title="@string/band_for_gprs" android:key="band_for_gprs" android:entryValues="@array/band_types" />
+    <ListPreference android:entries="@array/band_types_name" android:title="@string/band_for_edge" android:key="band_for_edge" android:entryValues="@array/band_types" />
+    <ListPreference android:entries="@array/band_types_name" android:title="@string/band_for_other" android:key="band_for_other" android:entryValues="@array/band_types" />
+</PreferenceScreen>

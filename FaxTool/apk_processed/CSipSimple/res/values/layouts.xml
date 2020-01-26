@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="layout" name="sip_home">@layout/sip_home_one_pane</item>
+    <item type="layout" name="dialpad_compose">@layout/dialpad_compose_3x5</item>
+</resources>

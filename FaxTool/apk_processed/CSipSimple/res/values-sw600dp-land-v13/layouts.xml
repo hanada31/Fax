@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="layout" name="sip_home">@layout/sip_home_one_pane</item>
+</resources>
