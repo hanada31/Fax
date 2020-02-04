@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <EditTextPreference android:singleLine="true" android:title="@string/w_common_display_name" android:key="display_name" />
-    <EditTextPreference android:singleLine="true" android:title="@string/w_authorization_phone_number" android:key="phone_number" />
-    <EditTextPreference android:singleLine="true" android:title="@string/w_authorization_auth_name" android:key="auth_name" />
-    <com.csipsimple.widgets.PasswordPreference android:password="true" android:singleLine="true" android:title="@string/w_common_password" android:key="password" />
-    <EditTextPreference android:singleLine="true" android:title="@string/w_common_server" android:key="server" />
-</PreferenceScreen>

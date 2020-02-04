@@ -15,7 +15,7 @@ if  __name__ == '__main__':
 	launch_dir = "Result_launch"+ os.sep
 	explore_dir = "Result_explore"+ os.sep
 	
-	faxJar ="lib/Fax.jar"
+	faxJar ="lib/Fax_1.1.jar"
 	max_number_of_path = 10000
 	act_type = "All" #EA or All
 	exploration_time = 60

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <bool name="use_dual_panes">true</bool>
-    <bool name="use_vertical_dialer_stack">true</bool>
-</resources>

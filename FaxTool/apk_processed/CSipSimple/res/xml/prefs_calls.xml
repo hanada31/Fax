@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <EditTextPreference android:title="@string/w_advanced_caller_id" android:key="default_caller_id" android:summary="@string/w_advanced_caller_id_desc" android:defaultValue="" />
-    <CheckBoxPreference android:title="@string/auto_record_calls" android:key="auto_record_calls" android:summary="@string/auto_record_calls_desc" android:defaultValue="false" />
-    <CheckBoxPreference android:title="@string/support_multiple_calls" android:key="support_multiple_calls" android:summary="@string/support_multiple_calls_desc" android:defaultValue="false" />
-    <CheckBoxPreference android:title="@string/use_video" android:key="use_video" android:summary="@string/use_video_desc" android:defaultValue="false" />
-</PreferenceScreen>
