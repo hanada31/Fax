@@ -18,7 +18,8 @@ This artifact is for the paper: "Multiple-Entry Testing of Android Applications 
     * copy lib/libz3/libz3.so and lib/libz3/libz3java.so to [your\_library\_path]
 	 * add java.library.path into file "/etc/profile" (export LD\_LIBRARY\_PATH=$LD\_LIBRARY\_PATH:/[your\_library_path]).
     * save the modification (source /etc/profile)
-* Prepare Android environment, the version of Android SDK is 17 and the version of Android SDK Tools should lower than 25.2.3.
+* Prepare Android environment ( Android sdk installation information, https://developer.android.com/), the version of Android SDK Tools should lower than 25.2.3.
+
 * Run "java -version", "python", "ant -version", "android create project" to check whether these tools are successfully configured.
 
 ## Usage of Fax:
