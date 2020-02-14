@@ -50,7 +50,7 @@ class TestGenerator:
 				
 				nowTime=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 				print nowTime
-				command = 'java -jar '+self.faxJar+' -p '+self.appDir+ ' -n ' +apk + " -maxPathNumber "  + str(self.maxPathNum) + ' -outputBasePath '+  self.testGenDir +'androlicOutput ' +' -o ' +self.testGenDir +' -exlib >  ' +  self.outputDir + apk[0:-4] + ".txt 2>&1" 	
+				command = 'java -jar '+self.faxJar+' -p '+self.appDir+ ' -n ' +apk + " -maxPathNumber "  + str(self.maxPathNum) + ' -outputBasePath '+  self.testGenDir +'androlicOutput ' +' -o ' +self.testGenDir +' -exlib ' #>  ' +  self.outputDir + apk[0:-4] + ".txt 2>&1" 	
 				print command +"\n"
 				os.system(command)
 	
