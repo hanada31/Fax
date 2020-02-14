@@ -89,7 +89,7 @@ class PreProcess:
 				continue
 			if ".apk" in name:
 				print "instrument apk "+ name
-				INSTRU = "java -jar lib\InsDal.jar -f "+self.outPath+"/"+name+"  -m -i"
+				INSTRU = "java -jar lib/InsDal.jar -f "+self.outPath+"/"+name+"  -m -i"
 				print (INSTRU)
 				os.system(INSTRU)
 				if(os.path.exists(self.outPath +os.sep + "ins_info")):
