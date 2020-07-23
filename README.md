@@ -2,7 +2,7 @@
 This artifact is for the paper: "Multiple-Entry Testing of Android Applications by Constructing Activity Launching Contexts".  
 
 <p align="center">
-<img src="overview/Fax.png" width="600">
+<img src="overview/Fax.jpg" width="600">
 </p>
 
 Fax is a multiple-entry testing tool for Android applications, which constructs activity launching contexts for apps and proposes a multiple-entry testing framework.
