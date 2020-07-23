@@ -12,7 +12,7 @@ Fax is a multiple-entry testing tool for testing Android applications, which con
 The paper PDF can be found at https://hanada31.github.io/pdf/icse20_fax.pdf
 ```
 @InProceedings{jiwei:icse:2020,
-author = {Jiwei Yan, Hao Liu, Linjie Pan, Jun Yan, Jian Zhang, Bin Liang},
+author = {Jiwei Yan and Hao Liu and Linjie Pan and Jun Yan and Jian Zhang and Bin Liang},
 title = {Multiple-Entry Testing of Android Applications by Constructing Activity Launching Contexts},
 booktitle = {Proceedings of the 42nd International Conference on Software Engineering},
 series = {ICSE '20},
