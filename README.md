@@ -1,5 +1,34 @@
-# Fax -- ReadMe
+# Fax--Fair Android Explorer 
 This artifact is for the paper: "Multiple-Entry Testing of Android Applications by Constructing Activity Launching Contexts".  
+
+<p align="center">
+<img src="overview/Fax.png" width="600">
+</p>
+
+Fax is a multiple-entry testing tool for Android applications, which constructs activity launching contexts for apps and proposes a multiple-entry testing framework.
+
+
+## Publication ##
+The paper PDF can be found at https://hanada31.github.io/pdf/icse20_fax.pdf
+```
+@inproceedings{LAND2018,
+  author    = {Jiwei Yan and
+               Linjie Pan and
+               Yaqi Li and
+               Jun Yan and
+               Jian Zhang},
+  title     = {{LAND:} a user-friendly and customizable test generation tool for
+               Android apps},
+  booktitle = {Proceedings of the 27th {ACM} {SIGSOFT} International Symposium on
+               Software Testing and Analysis, {ISSTA} 2018, Amsterdam, The Netherlands,
+               July 16-21, 2018},
+  pages     = {360--363},
+  publisher = {{ACM}},
+  year      = {2018},
+  url       = {https://doi.org/10.1145/3213846.3229500},
+}
+
+```
 
 ## Structure:
 - Fax
