@@ -14,8 +14,9 @@ if  __name__ == '__main__':
 	execute_info_dir = testcase_dir +"executeInfo"+ os.sep
 	launch_dir = "Result_launch"+ os.sep
 	explore_dir = "Result_explore"+ os.sep
+	sdkVersion = "23"
 	
-	faxJar ="lib/Fax_1.1.jar"
+	faxJar ="lib/Fax.jar"
 	max_number_of_path = 10000
 	act_type = "All" #EA or All
 	exploration_time = 60
@@ -29,7 +30,7 @@ if  __name__ == '__main__':
 	print "Preprocess Finish!"
 	
 	#[Test Generation]
-	generator = TestGenerator(faxJar, apk_input_dir, testcase_dir, execute_info_dir, max_number_of_path)
+	generator = TestGenerator(faxJar, apk_input_dir, testcase_dir, execute_info_dir, max_number_of_path, sdkVersion )
 	generator.generateTC()
 	print "Preprocess Finish!"
 	

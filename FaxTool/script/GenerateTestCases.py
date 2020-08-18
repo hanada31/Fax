@@ -8,12 +8,13 @@ import datetime
 
 class TestGenerator:
 
-	def __init__(self, faxJar, appDir, testGenDir, outputDir, maxPathNum):
+	def __init__(self, faxJar, appDir, testGenDir, outputDir, maxPathNum, sdkVersion):
 		self.faxJar = faxJar
 		self.appDir = appDir
 		self.testGenDir = testGenDir
 		self.outputDir = outputDir
 		self.maxPathNum = maxPathNum
+		self.sdkVersion = sdkVersion
 		
 	def getSet(self,fn, aset):
 		if not os.path.exists(fn):		
@@ -50,7 +51,7 @@ class TestGenerator:
 				
 				nowTime=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 				print nowTime
-				command = 'java -jar '+self.faxJar+' -p '+self.appDir+ ' -n ' +apk + " -maxPathNumber "  + str(self.maxPathNum) + ' -outputBasePath '+  self.testGenDir +'androlicOutput ' +' -o ' +self.testGenDir +' -exlib ' #>  ' +  self.outputDir + apk[0:-4] + ".txt 2>&1" 	
+				command = 'java -jar '+self.faxJar +' -v '+self.sdkVersion +' -p '+self.appDir+ ' -n ' +apk + " -maxPathNumber "  + str(self.maxPathNum) + ' -outputBasePath '+  self.testGenDir +'androlicOutput ' +' -o ' +self.testGenDir +' -exlib >  ' +  self.outputDir + apk[0:-4] + ".txt 2>&1" 	
 				print command +"\n"
 				os.system(command)
 	
