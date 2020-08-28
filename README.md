@@ -36,8 +36,9 @@ pages={457-468}}
   * For Windows: copy lib/libz/libz3.dll and lib/libz3/libz3java.dll to %JAVA_HOME%\bin\.
   * For Unix-like platforms: 
     * copy lib/libz3/libz3.so and lib/libz3/libz3java.so to [your\_library\_path]
-	 * add java.library.path into file "/etc/profile" (export LD\_LIBRARY\_PATH=$LD\_LIBRARY\_PATH:/[your\_library_path]).
-    * save the modification (source /etc/profile)
+	 * add java.library.path into the enviroment variable file [enviroment_path], e.g., ~/.bash_profile, /etc/profile.
+	   i.e., "export LD\_LIBRARY\_PATH=$LD\_LIBRARY\_PATH:[your\_library\_path]" to file [enviroment\_path].
+    * save the modification (source [enviroment\_path])
 * Prepare Android environment ( Android sdk installation information, https://developer.android.com/), the version of Android SDK Tools should lower than 25.2.3.
 
 * Run "java -version", "python", "ant -version", "android create project" to check whether these tools are successfully configured.
