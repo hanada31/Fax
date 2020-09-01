@@ -53,7 +53,7 @@ class TestGenerator:
 			nowTime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 			print(nowTime)
 			command = 'java -jar ' + self.faxJar + ' -time ' + str(self.analyzingTime) +' -Instrument -v ' + self.sdkVersion + ' -p ' + self.appDir + ' -n ' + apk + " -maxPathNumber " + str(
-				self.maxPathNum) + ' -outputBasePath ' + self.testGenDir + 'androlicOutput ' + ' -o ' + self.testGenDir + ' -exlib'  # >  ' +  self.outputDir + apk[0:-4] + ".txt 2>&1"
+				self.maxPathNum) + ' -outputBasePath ' + self.testGenDir + 'androlicOutput ' + ' -o ' + self.testGenDir + ' -exlib >  ' +  self.outputDir + apk[0:-4] + ".txt 2>&1"
 			print(command)
 			os.system(command)
 			
