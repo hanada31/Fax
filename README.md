@@ -36,9 +36,8 @@ pages={457-468}}
   * For Windows: copy lib/libz/libz3.dll and lib/libz3/libz3java.dll to %JAVA_HOME%\bin\.
   * For Unix-like platforms: 
     * copy lib/libz3/libz3.so and lib/libz3/libz3java.so to [your\_library\_path]
-	 * add java.library.path into the enviroment variable file [enviroment_path], e.g., ~/.bash_profile, /etc/profile.
-	   i.e., "export LD\_LIBRARY\_PATH=$LD\_LIBRARY\_PATH:[your\_library\_path]" to file [enviroment\_path].
-    * save the modification (source [enviroment\_path])
+	 * add java.library.path into file "/etc/profile" (export LD\_LIBRARY\_PATH=$LD\_LIBRARY\_PATH:/[your\_library_path]).
+    * save the modification (source /etc/profile)
 * Prepare Android environment ( Android sdk installation information, https://developer.android.com/), the version of Android SDK Tools should lower than 25.2.3.
 
 * Run "java -version", "python", "ant -version", "android create project" to check whether these tools are successfully configured.
@@ -51,18 +50,15 @@ pages={457-468}}
 	*To modify the exploration time of Fax\_ex, please update the variable exploration_time in file FaxTool\script\run.py.   
 	In our paper, the exploration time is one hour (3600). If you want a quick validation, use the default value in Fax (60).  
 
-* Preprocess
-Put the apk under test under the [apk_input_dir], and get the result in the [apk_output_dir].  
-python  script/Prerocess.py  [apk_input_dir]  [apk_output_dir]  
-e.g., python  script/Prerocess.py  apk  apk_processed  
-Then the activities will be exposed, the app will be instrumented, and then installed on the device.  
-For log-in required apps, you can log-in first after installation to improve the exploration coverage.    
-
-
 * Test Generation
-python  script/GenerateTestCases.py  lib/Fax0108.jar [apk_input_dir]  [testcase_dir] [execute_info_dir] [max_number_of_path]  
-e.g., python  script/GenerateTestCases.py  lib/Fax0108.jar  apk Result_testGen  executeInfo 10000  
-Get results in folder [testcase_dir].
+python  script/GenerateTestCases.py  lib/Fax0108.jar [apk_input_dir]  [testcase_dir] [execute_info_dir] [max_number_of_path] [sdkVersion] [install]
+e.g., python  script/GenerateTestCases.py  lib/Fax0108.jar  apk Result_testGen  executeInfo 10000 23 True
+
+Put the apk under test under the [apk_input_dir], and get results in folder [testcase_dir].
+The activities will be exposed.
+The app will be instrumented, and then installed on the device.  
+For log-in required apps, you can log-in first after installation to improve the exploration coverage.    
+If parameter [install] is set as 'True', the instumented apk will be installed on the connected device for further testing.
 
 * Fax Launching Test
 python script/LaunchActs.py [testcase_dir]  [launch_dir]  
