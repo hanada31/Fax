@@ -1,0 +1,23 @@
+BugInfo:
+hash:-744520680
+FATAL EXCEPTION: main
+java.lang.NullPointerException: Attempt to invoke virtual method 'int android.util.Size.getWidth()' on a null object reference
+	at com.android.internal.widget.FloatingToolbar$FloatingToolbarPopup$22.onMeasure(FloatingToolbar.java:2415)
+	at android.view.View.measure(View.java:23297)
+	at com.android.internal.widget.FloatingToolbar$FloatingToolbarPopup.measure(FloatingToolbar.java:2611)
+	at com.android.internal.widget.FloatingToolbar$FloatingToolbarPopup.layoutMainPanelItems(FloatingToolbar.java:2253)
+	at com.android.internal.widget.FloatingToolbar$FloatingToolbarPopup.layoutMenuItems(FloatingToolbar.java:851)
+	at com.android.internal.widget.FloatingToolbar.doShow(FloatingToolbar.java:277)
+	at com.android.internal.widget.FloatingToolbar.show(FloatingToolbar.java:227)
+	at com.android.internal.view.FloatingActionMode$FloatingToolbarVisibilityHelper.updateToolbarVisibility(FloatingActionMode.java:414)
+	at com.android.internal.view.FloatingActionMode$1.run(FloatingActionMode.java:76)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+------------------------------------------------------------------------

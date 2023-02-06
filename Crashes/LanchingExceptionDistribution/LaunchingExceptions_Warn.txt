@@ -1,0 +1,15 @@
+java.sql.SQLException	1
+android.os.BadParcelableException	188
+java.lang.IndexOutOfBoundsException	1
+kotlin.UninitializedPropertyAccessException	2
+java.lang.ClassNotFoundException	202
+android.content.res.Resources$NotFoundException	3
+java.lang.VerifyError	1
+java.lang.NullPointerException	66
+kotlin.KotlinNullPointerException	8
+java.lang.InstantiationException	1
+org.json.JSONException	1
+java.lang.RuntimeException	8
+java.lang.ArrayIndexOutOfBoundsException	1
+java.lang.IllegalArgumentException	11
+java.lang.IllegalStateException	4

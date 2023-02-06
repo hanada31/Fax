@@ -1,0 +1,44 @@
+BugInfo:
+hash:966166071
+FATAL EXCEPTION: main
+com.afollestad.materialdialogs.MaterialDialog$DialogException: Bad window token, you cannot show a dialog before an Activity is created or after it's hidden.
+	at com.afollestad.materialdialogs.MaterialDialog.show(MaterialDialog.java:1388)
+	at com.ichi2.anki.ReadText$2.run(ReadText.java:139)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1399857017
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Failure delivering result ResultInfo{who=null, request=0, result=0, data=null} to activity {com.ichi2.anki/com.ichi2.anki.Reviewer}: java.lang.NullPointerException: Attempt to invoke virtual method 'long com.ichi2.libanki.Card.getODid()' on a null object reference
+	at android.app.ActivityThread.deliverResults(ActivityThread.java:4491)
+	at android.app.ActivityThread.handleSendResult(ActivityThread.java:4534)
+	at android.app.ActivityThread.-wrap20(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1752)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'long com.ichi2.libanki.Card.getODid()' on a null object reference
+	at com.ichi2.anki.AbstractFlashcardViewer.getDeckIdForCard(AbstractFlashcardViewer.java:2311)
+	at com.ichi2.anki.AbstractFlashcardViewer.getConfigForCurrentCard(AbstractFlashcardViewer.java:2298)
+	at com.ichi2.anki.AbstractFlashcardViewer.fillFlashcard(AbstractFlashcardViewer.java:2329)
+	at com.ichi2.anki.Reviewer.fillFlashcard(Reviewer.java:442)
+	at com.ichi2.anki.AbstractFlashcardViewer.onActivityResult(AbstractFlashcardViewer.java:1091)
+	at com.ichi2.anki.Reviewer.onActivityResult(Reviewer.java:582)
+	at android.app.Activity.dispatchActivityResult(Activity.java:7599)
+	at android.app.ActivityThread.deliverResults(ActivityThread.java:4487)
+	... 9 more
+
+ICC Msgs:
+------------------------------------------------------------------------

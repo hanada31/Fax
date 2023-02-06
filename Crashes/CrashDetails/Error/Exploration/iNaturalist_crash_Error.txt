@@ -1,0 +1,42 @@
+BugInfo:
+hash:349815416
+FATAL EXCEPTION: main
+java.lang.NullPointerException: Attempt to invoke virtual method 'android.os.IBinder android.view.View.getWindowToken()' on a null object reference
+	at org.inaturalist.android.ObservationViewerActivity$12.onClick(ObservationViewerActivity.java:1164)
+	at com.android.internal.app.AlertController$ButtonHandler.handleMessage(AlertController.java:177)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+------------------------------------------------------------------------
+
+BugInfo:
+hash:628662878
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Error receiving broadcast Intent { act=register_user_result flg=0x10 (has extras) } in org.inaturalist.android.LoginSignupActivity$UserRegisterReceiver@285fc18
+	at android.app.LoadedApk$ReceiverDispatcher$Args.lambda$-android_app_LoadedApk$ReceiverDispatcher$Args_52226(LoadedApk.java:1329)
+	at android.app.-$Lambda$FilBqgnXJrN9Mgyks1XHeAxzSTk.$m$0(Unknown Source:4)
+	at android.app.-$Lambda$FilBqgnXJrN9Mgyks1XHeAxzSTk.run(Unknown Source:0)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: java.lang.IllegalStateException: Cannot execute task: the task is already running.
+	at android.os.AsyncTask.executeOnExecutor(AsyncTask.java:637)
+	at android.os.AsyncTask.execute(AsyncTask.java:595)
+	at org.inaturalist.android.SignInTask.signIn(SignInTask.java:357)
+	at org.inaturalist.android.SignInTask.signIn(SignInTask.java:333)
+	at org.inaturalist.android.LoginSignupActivity$UserRegisterReceiver.onReceive(LoginSignupActivity.java:99)
+	at android.app.LoadedApk$ReceiverDispatcher$Args.lambda$-android_app_LoadedApk$ReceiverDispatcher$Args_52226(LoadedApk.java:1319)
+	... 9 more
+
+ICC Msgs:
+------------------------------------------------------------------------
+

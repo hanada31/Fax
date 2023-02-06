@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_66"/>
+	<classpathentry exported="true" kind="lib" path="lib/dom4j-2.0.0-RC1.jar"/>
+	<classpathentry kind="lib" path="lib/axml-2.0.jar"/>
+	<classpathentry kind="lib" path="lib/com.microsoft.z3_linux.jar"/>
+	<classpathentry kind="lib" path="lib/soot-infoflow-android.jar"/>
+	<classpathentry kind="lib" path="lib/commons-cli-1.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/AndrolicForFax.jar" sourcepath="/AndrolicForFax"/>
+	<classpathentry kind="lib" path="lib/sootclasses-trunk-jar-with-dependencies.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

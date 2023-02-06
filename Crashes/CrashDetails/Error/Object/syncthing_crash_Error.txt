@@ -1,0 +1,69 @@
+BugInfo:
+hash:1427309971
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.nutomic.syncthingandroid/com.nutomic.syncthingandroid.activities.ShareActivity}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.nutomic.syncthingandroid.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.nutomic.syncthingandroid.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.Bundle.getParcelable(Bundle.java:888)
+	at android.content.Intent.getParcelableExtra(Intent.java:7746)
+	at com.nutomic.syncthingandroid.activities.ShareActivity.onCreate(ShareActivity.java:123)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+26	com.nutomic.syncthingandroid.activities.ShareActivity	"android.intent.action.SEND";;null;;null;;null;;Parcelable->android.intent.extra.STREAM->ParcelableObj,
+
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1796996564
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.nutomic.syncthingandroid/com.nutomic.syncthingandroid.activities.ShareActivity}: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.nutomic.syncthingandroid.MyParcelable
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2957)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3032)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1696)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: fax.com.nutomic.syncthingandroid.MyParcelable
+	at android.os.Parcel.readParcelableCreator(Parcel.java:2871)
+	at android.os.Parcel.readParcelable(Parcel.java:2797)
+	at android.os.Parcel.readValue(Parcel.java:2700)
+	at android.os.Parcel.readListInternal(Parcel.java:3128)
+	at android.os.Parcel.readArrayList(Parcel.java:2330)
+	at android.os.Parcel.readValue(Parcel.java:2721)
+	at android.os.Parcel.readArrayMapInternal(Parcel.java:3067)
+	at android.os.BaseBundle.unparcel(BaseBundle.java:257)
+	at android.os.Bundle.getParcelableArrayList(Bundle.java:934)
+	at android.content.Intent.getParcelableArrayListExtra(Intent.java:7774)
+	at com.nutomic.syncthingandroid.activities.ShareActivity.onCreate(ShareActivity.java:127)
+	at android.app.Activity.performCreate(Activity.java:7183)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1220)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2910)
+	... 9 more
+
+ICC Msgs:
+27	com.nutomic.syncthingandroid.activities.ShareActivity	"android.intent.action.SEND_MULTIPLE";;null;;null;;null;;ParcelableArrayList->android.intent.extra.STREAM->ParcelableArrayListObj,
+
+------------------------------------------------------------------------
+

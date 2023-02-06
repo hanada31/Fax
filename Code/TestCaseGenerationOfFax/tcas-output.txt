@@ -1,0 +1,9 @@
+# ACTS Test Suite Generation: Wed Feb 13 16:57:33 CST 2019
+#  '*' represents don't care value 
+# Degree of interaction coverage: 2
+# Number of parameters: 5
+# Maximum number of values per parameter: 1
+# Number of configurations: 2
+action,category,data,type,call_info
+none,none,none,none,ParcelableObj
+none,none,none,none,none

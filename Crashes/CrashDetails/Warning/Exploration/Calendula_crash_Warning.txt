@@ -1,0 +1,65 @@
+
+BugInfo:
+hash:547641383
+FATAL EXCEPTION: main
+java.lang.NullPointerException: Attempt to invoke virtual method 'int es.usc.citius.servando.calendula.persistence.Schedule.type()' on a null object reference
+	at es.usc.citius.servando.calendula.activities.ScheduleCreationActivity.validateBeforeSave(Unknown Source:116)
+	at es.usc.citius.servando.calendula.activities.ScheduleCreationActivity.saveSchedule(Unknown Source:3)
+	at es.usc.citius.servando.calendula.activities.ScheduleCreationActivity$7.onClick(Unknown Source:8)
+	at android.view.View.performClick(View.java:6897)
+	at android.view.View$PerformClick.run(View.java:26101)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+------------------------------------------------------------------------
+
+BugInfo:
+hash:-1834036083
+FATAL EXCEPTION: main
+java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String es.usc.citius.servando.calendula.persistence.Schedule.toReadableString(android.content.Context)' on a null object reference
+	at es.usc.citius.servando.calendula.fragments.ScheduleSummaryFragment.updateSummary(Unknown Source:121)
+	at es.usc.citius.servando.calendula.fragments.ScheduleSummaryFragment.setUserVisibleHint(Unknown Source:18)
+	at android.support.v4.app.s.setPrimaryItem(Unknown Source:27)
+	at android.support.v4.view.ViewPager.populate(Unknown Source:385)
+	at android.support.v4.view.ViewPager.setCurrentItemInternal(Unknown Source:107)
+	at android.support.v4.view.ViewPager.setCurrentItemInternal(Unknown Source:1)
+	at android.support.v4.view.ViewPager.setCurrentItem(Unknown Source:7)
+	at com.astuetz.PagerSlidingTabStrip$2.onClick(Unknown Source:8)
+	at android.view.View.performClick(View.java:6897)
+	at android.widget.TextView.performClick(TextView.java:12693)
+	at android.view.View$PerformClick.run(View.java:26101)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+------------------------------------------------------------------------
+
+BugInfo:
+hash:1647231679
+FATAL EXCEPTION: main
+java.lang.ArithmeticException: divide by zero
+	at com.journeyapps.barcodescanner.c.m(Unknown Source:85)
+	at com.journeyapps.barcodescanner.c.b(Unknown Source:6)
+	at com.journeyapps.barcodescanner.c.b(Unknown Source:0)
+	at com.journeyapps.barcodescanner.c$3.handleMessage(Unknown Source:12)
+	at android.os.Handler.dispatchMessage(Handler.java:101)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)
+
+ICC Msgs:
+------------------------------------------------------------------------
+
