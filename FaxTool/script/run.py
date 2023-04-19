@@ -22,10 +22,10 @@ if  __name__ == '__main__':
 	exploration_time = 60
 	
 	#[Preprocess]
-	# pre = PreProcess(apk_input_dir,apk_output_dir)
-	# pre.exportApp()
-	# pre.instrument()
-	# pre.install()
+	pre = PreProcess(apk_input_dir,apk_output_dir)
+	pre.exportApp()
+	pre.instrument()
+	pre.install()
 	
 	print "Preprocess Finish!"
 	

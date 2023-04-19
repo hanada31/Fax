@@ -83,6 +83,7 @@ class ActivityLauncher:
 		
 								
 	def compareActivity(self, testActName, fn, package):
+        #adb shell dumpsys activity | findstr "mFocus", if your android system version < 8.1
 		result = os.popen('adb shell dumpsys activity | findstr \"mResume\" ')  
 		res = result.read() 	
 		str = ""
